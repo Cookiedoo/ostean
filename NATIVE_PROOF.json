@@ -1,0 +1,894 @@
+{
+  "platform": "win32",
+  "architecture": "x64",
+  "binarySha256": "bc51824320b802312ed2f4050e18d05240e887ee3f0546f870477820545c5418",
+  "results": [
+    {
+      "name": "alias_dom",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10391,
+      "output": "runtime/main.ts:50: ERR_701_LAYER_BREACH: DOM operation is outside the approved presentation corridor\r\n"
+    },
+    {
+      "name": "alias_state",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10292,
+      "output": "primitives/alias.ts:5: ERR_701_LAYER_BREACH: Stateful contract call outside orchestration layers\r\n"
+    },
+    {
+      "name": "aliased_browser_frame",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10402,
+      "output": "components/ui/Opaque.tsx:4: ERR_705_UNVERIFIABLE_CONSTRUCT: Opaque browser execution element is unsupported: iframe\r\n"
+    },
+    {
+      "name": "aliased_failure_dispatch",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10370,
+      "output": "components/alias-failure.ts:6: ERR_701_LAYER_BREACH: Failure dispatch requires a registered numerical code\r\n"
+    },
+    {
+      "name": "aliased_hrtime_clock",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 11100,
+      "output": "services/value-store.ts:9: ERR_703_NONDETERMINISTIC_CALL: Raw platform clock or entropy reference outside core\r\nservices/value-store.ts:9: ERR_703_NONDETERMINISTIC_CALL: Raw substrate reference cannot be aliased\r\nservices/value-store.ts:10: ERR_703_NONDETERMINISTIC_CALL: Deterministic substrate call outside core/constants.ts\r\n"
+    },
+    {
+      "name": "aliased_platform_clock",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10390,
+      "output": "services/value-store.ts:10: ERR_703_NONDETERMINISTIC_CALL: Deterministic substrate call outside core/constants.ts\r\nservices/value-store.ts:10: ERR_703_NONDETERMINISTIC_CALL: Raw platform clock or entropy reference outside core\r\n"
+    },
+    {
+      "name": "alternate_seed",
+      "args": [
+        "test"
+      ],
+      "exit": 0,
+      "signal": null,
+      "milliseconds": 10528,
+      "output": "Verified compliance: 15 sources; TypeScript 5.7.3; declared external trust boundary\r\n{\"ok\":true,\"public\":{\"ok\":true,\"passed\":9,\"total\":9},\"private\":{\"ok\":true,\"passed\":128,\"total\":128,\"executed\":128,\"categories\":[32,32,32,32],\"seed\":1234567}}\r\n"
+    },
+    {
+      "name": "ambient_browser_value",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10337,
+      "output": "primitives/browser.ts:2: ERR_705_UNVERIFIABLE_CONSTRUCT: Ambient browser values are outside declarative presentation and bootstrap subset\r\n"
+    },
+    {
+      "name": "ambient_callable_erasure",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10583,
+      "output": "primitives/ambient-callable.ts:3: ERR_705_UNVERIFIABLE_CONSTRUCT: Project ambient declarations have no verified implementation\r\nprimitives/ambient-callable.ts:3: ERR_705_UNVERIFIABLE_CONSTRUCT: Project callable declarations require explicit implementations\r\nprimitives/ambient-callable.ts:5: ERR_705_UNVERIFIABLE_CONSTRUCT: Callable implementation cannot be verified\r\n"
+    },
+    {
+      "name": "ambient_process",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10483,
+      "output": "services/ambient.ts:2: ERR_701_LAYER_BREACH: Service exports require canonical mockable method interfaces\r\nservices/ambient.ts:2: ERR_705_UNVERIFIABLE_CONSTRUCT: Ambient runtime capability requires explicit verified adapter\r\nservices/ambient.ts:2: ERR_705_UNVERIFIABLE_CONSTRUCT: External property access requires canonical recovery\r\n"
+    },
+    {
+      "name": "check_reference",
+      "args": [
+        "check"
+      ],
+      "exit": 0,
+      "signal": null,
+      "milliseconds": 11381,
+      "output": "Verified compliance: 15 sources; TypeScript 5.7.3; declared external trust boundary\r\n"
+    },
+    {
+      "name": "compiler_pragma",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10313,
+      "output": "primitives/suppressed.ts:1: ERR_705_UNVERIFIABLE_CONSTRUCT: Compiler directives cannot override verified socket semantics\r\n"
+    },
+    {
+      "name": "core_date",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10278,
+      "output": "core/constants.ts:71: ERR_701_LAYER_BREACH: Core exports must contain passive immutable data\r\nprimitives/ambient.ts:3: ERR_703_NONDETERMINISTIC_CALL: Deterministic substrate call outside core/constants.ts\r\n"
+    },
+    {
+      "name": "core_helpers",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 9921,
+      "output": "core/helpers.ts:1: ERR_701_LAYER_BREACH: Noncanonical core source\r\n"
+    },
+    {
+      "name": "core_logic",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10200,
+      "output": "core/constants.ts:71: ERR_701_LAYER_BREACH: Mutable core state is reserved for sealed substrate hooks\r\ncore/constants.ts:72: ERR_701_LAYER_BREACH: Core module-level mutation violates registry purity\r\n"
+    },
+    {
+      "name": "core_object_alias",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 11015,
+      "output": "services/value-store.ts:8: ERR_705_UNVERIFIABLE_CONSTRUCT: Shared registry and namespace objects require explicit member reads\r\n"
+    },
+    {
+      "name": "core_object_mutation",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10987,
+      "output": "services/value-store.ts:8: ERR_701_LAYER_BREACH: Passive registry member mutation is prohibited\r\n"
+    },
+    {
+      "name": "crypto_random_integer",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 9755,
+      "output": "services/value-store.ts:9: ERR_703_NONDETERMINISTIC_CALL: Deterministic substrate call outside core/constants.ts\r\nservices/value-store.ts:9: ERR_703_NONDETERMINISTIC_CALL: Raw platform clock or entropy reference outside core\r\nservices/value-store.ts:35: ERR_703_NONDETERMINISTIC_CALL: Raw platform clock or entropy reference outside core\r\n"
+    },
+    {
+      "name": "css_comment_weight",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10788,
+      "output": "core/styles.css:33: ERR_702_WEIGHT_EXCEEDED: Style comment violates core token documentation rules\r\n"
+    },
+    {
+      "name": "dependency_resolution_override",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 391,
+      "output": "package.json:1: ERR_705_UNVERIFIABLE_CONSTRUCT: Project dependency resolution overrides are unsupported: exports\r\n"
+    },
+    {
+      "name": "dom_event_leak",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10248,
+      "output": "components/ui/event.ts:5: ERR_701_LAYER_BREACH: External type crosses anatomical boundary\r\ncomponents/ui/event.ts:5: ERR_701_LAYER_BREACH: Type widening conceals presentation or DOM data\r\ncomponents/ui/event.ts:5: ERR_705_UNVERIFIABLE_CONSTRUCT: Ambient browser values are outside declarative presentation and bootstrap subset\r\ncomponents/ui/event.ts:5: ERR_705_UNVERIFIABLE_CONSTRUCT: TS2322: Type 'MouseEvent' is not assignable to type 'RawValue'.\r\n"
+    },
+    {
+      "name": "duplicate_literal",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 13691,
+      "output": "components/duplicate.ts:4: ERR_704_DUPLICATION_BREACH: Repeated literal requires canonical extraction; first at components/duplicate.ts:3\r\n"
+    },
+    {
+      "name": "dynamic_builtin_loader",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10969,
+      "output": "services/value-store.ts:9: ERR_705_UNVERIFIABLE_CONSTRUCT: Native loader or evaluator capability is outside the verified socket\r\nservices/value-store.ts:9: ERR_705_UNVERIFIABLE_CONSTRUCT: Type containment exceeds supported complexity\r\n"
+    },
+    {
+      "name": "dynamic_import",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 13266,
+      "output": "services/dynamic.ts:2: ERR_701_LAYER_BREACH: Service exports require canonical mockable method interfaces\r\nservices/dynamic.ts:2: ERR_705_UNVERIFIABLE_CONSTRUCT: Call capability cannot be statically verified: import\r\nservices/dynamic.ts:2: ERR_705_UNVERIFIABLE_CONSTRUCT: Runtime import is unsupported\r\nservices/dynamic.ts:2: ERR_705_UNVERIFIABLE_CONSTRUCT: Service awaits require canonical recovery\r\n"
+    },
+    {
+      "name": "empty_core_helpers",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 9761,
+      "output": "core/helpers/:1: ERR_701_LAYER_BREACH: Core helper directories are prohibited\r\n"
+    },
+    {
+      "name": "erased_error_registry_type",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10291,
+      "output": "core/errors.ts:1: ERR_705_UNVERIFIABLE_CONSTRUCT: Canonical signal type definition was altered: FailureCode\r\n"
+    },
+    {
+      "name": "erased_ui_node",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10317,
+      "output": "components/ui/erased.tsx:3: ERR_701_LAYER_BREACH: Type widening conceals presentation or DOM data\r\ncomponents/ui/erased.tsx:3: ERR_705_UNVERIFIABLE_CONSTRUCT: TS2322: Type 'Element' is not assignable to type 'RawValue'.\r\n"
+    },
+    {
+      "name": "expression_reflection",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10425,
+      "output": "services/reflection.ts:2: ERR_701_LAYER_BREACH: Service exports require canonical mockable method interfaces\r\nservices/reflection.ts:2: ERR_705_UNVERIFIABLE_CONSTRUCT: Call capability cannot be statically verified: eval\r\nservices/reflection.ts:2: ERR_705_UNVERIFIABLE_CONSTRUCT: Opaque global capability: eval\r\n"
+    },
+    {
+      "name": "external_getter_recovery",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10248,
+      "output": "services/value-store.ts:8: ERR_705_UNVERIFIABLE_CONSTRUCT: External property access requires canonical recovery\r\n"
+    },
+    {
+      "name": "fabricated_private_report",
+      "args": [
+        "test"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10243,
+      "output": "tests/private/stress.ts:1: ERR_705_UNVERIFIABLE_CONSTRUCT: Locked private harness differs from the verified socket\r\n"
+    },
+    {
+      "name": "false_dependency_pin",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 377,
+      "output": "ostean.json:1: ERR_705_UNVERIFIABLE_CONSTRUCT: Resolved dependency version differs from pin: react\r\n"
+    },
+    {
+      "name": "generic_contract",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10307,
+      "output": "components/unregistered.ts:3: ERR_705_UNVERIFIABLE_CONSTRUCT: Instantiated boundary parameter lacks canonical contract\r\n"
+    },
+    {
+      "name": "global_intrinsic_binding",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10247,
+      "output": "services/value-store.ts:8: ERR_701_LAYER_BREACH: Trusted global binding mutation is prohibited\r\n"
+    },
+    {
+      "name": "headless_ui",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10721,
+      "output": "workflows/presentation.ts:1: ERR_701_LAYER_BREACH: Forbidden import: workflows/presentation.ts -> components/ui/Presentation.tsx\r\n"
+    },
+    {
+      "name": "inferred_any_contract",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10035,
+      "output": "core/schemas.ts:60: ERR_701_LAYER_BREACH: Core contracts cannot contain external library types\r\ncore/schemas.ts:60: ERR_705_UNVERIFIABLE_CONSTRUCT: Inferred opaque core contract is unverifiable\r\n"
+    },
+    {
+      "name": "init_default",
+      "args": [
+        "init"
+      ],
+      "exit": 0,
+      "signal": null,
+      "milliseconds": 86,
+      "output": "Initialized Ostean (v_final): ostean-app\r\n"
+    },
+    {
+      "name": "init_reference",
+      "args": [
+        "init",
+        "reference",
+        "--lang=ts"
+      ],
+      "exit": 0,
+      "signal": null,
+      "milliseconds": 2226,
+      "output": "Initialized Ostean (v_final): reference\r\n"
+    },
+    {
+      "name": "inline_standard_control",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10348,
+      "output": "components/ui/Unmastered.tsx:3: ERR_701_LAYER_BREACH: Standard control requires its canonical master module: Button.tsx\r\n"
+    },
+    {
+      "name": "inline_stylesheet_element",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10731,
+      "output": "components/ui/InlineSheet.tsx:3: ERR_701_LAYER_BREACH: Styles must reside in core/styles.css\r\n"
+    },
+    {
+      "name": "inline_visual",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10414,
+      "output": "components/ui/Inline.tsx:3: ERR_701_LAYER_BREACH: Visual values must reference core/styles.css classes\r\n"
+    },
+    {
+      "name": "intrinsic_container_alias",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 9996,
+      "output": "services/value-store.ts:8: ERR_705_UNVERIFIABLE_CONSTRUCT: Intrinsic callbacks require explicit verified wrappers\r\nservices/value-store.ts:10: ERR_701_LAYER_BREACH: Trusted intrinsic member mutation is prohibited\r\nservices/value-store.ts:10: ERR_705_UNVERIFIABLE_CONSTRUCT: Intrinsic callbacks require explicit verified wrappers\r\n"
+    },
+    {
+      "name": "layer_upward",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 12331,
+      "output": "primitives/breach.ts:1: ERR_701_LAYER_BREACH: Forbidden import: primitives/breach.ts -> components/parse-reading.ts\r\n"
+    },
+    {
+      "name": "legal_free_bindings",
+      "args": [
+        "check"
+      ],
+      "exit": 0,
+      "signal": null,
+      "milliseconds": 10206,
+      "output": "Verified compliance: 16 sources; TypeScript 5.7.3; declared external trust boundary\r\n"
+    },
+    {
+      "name": "legal_intrinsic_alias",
+      "args": [
+        "check"
+      ],
+      "exit": 0,
+      "signal": null,
+      "milliseconds": 10297,
+      "output": "Verified compliance: 16 sources; TypeScript 5.7.3; declared external trust boundary\r\n"
+    },
+    {
+      "name": "legal_master_control",
+      "args": [
+        "check"
+      ],
+      "exit": 0,
+      "signal": null,
+      "milliseconds": 10681,
+      "output": "Verified compliance: 16 sources; TypeScript 5.7.3; declared external trust boundary\r\n"
+    },
+    {
+      "name": "legal_registry_iteration",
+      "args": [
+        "check"
+      ],
+      "exit": 0,
+      "signal": null,
+      "milliseconds": 10589,
+      "output": "Verified compliance: 16 sources; TypeScript 5.7.3; declared external trust boundary\r\n"
+    },
+    {
+      "name": "legal_ui_data_edge",
+      "args": [
+        "check"
+      ],
+      "exit": 0,
+      "signal": null,
+      "milliseconds": 10298,
+      "output": "Verified compliance: 15 sources; TypeScript 5.7.3; declared external trust boundary\r\n"
+    },
+    {
+      "name": "legal_ui_event_local",
+      "args": [
+        "check"
+      ],
+      "exit": 0,
+      "signal": null,
+      "milliseconds": 10692,
+      "output": "Verified compliance: 15 sources; TypeScript 5.7.3; declared external trust boundary\r\n"
+    },
+    {
+      "name": "literal_failure_dispatch",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 11153,
+      "output": "components/literal-failure.ts:4: ERR_701_LAYER_BREACH: Failure dispatch requires a registered numerical code\r\n"
+    },
+    {
+      "name": "mixed_line_terminator_weight",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10166,
+      "output": "primitives/clamp.ts:1: ERR_702_WEIGHT_EXCEEDED: Source has 58 lines; cap is 50\r\n"
+    },
+    {
+      "name": "mount_null_mapping",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10724,
+      "output": "runtime/main.ts:23: ERR_705_UNVERIFIABLE_CONSTRUCT: Mount null recovery cannot be verified\r\n"
+    },
+    {
+      "name": "multiline_core_token",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10338,
+      "output": "core/constants.ts:3: ERR_702_WEIGHT_EXCEEDED: Core token requires a single comment of at most five words\r\n"
+    },
+    {
+      "name": "noncanonical_core_metadata",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 9671,
+      "output": "core/extra.md:1: ERR_701_LAYER_BREACH: Noncanonical core source\r\n"
+    },
+    {
+      "name": "nondeterministic_clock",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 13384,
+      "output": "primitives/clock.ts:2: ERR_703_NONDETERMINISTIC_CALL: Deterministic substrate call outside core/constants.ts\r\nprimitives/clock.ts:2: ERR_703_NONDETERMINISTIC_CALL: Raw deterministic capability reference outside core\r\nprimitives/clock.ts:2: ERR_703_NONDETERMINISTIC_CALL: Raw substrate member reference outside core\r\nprimitives/clock.ts:2: ERR_703_NONDETERMINISTIC_CALL: Raw substrate reference cannot be aliased\r\n"
+    },
+    {
+      "name": "numeric_error",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10519,
+      "output": "components/numeric-error.ts:3: ERR_701_LAYER_BREACH: Failure code must originate in core/errors.ts\r\ncomponents/numeric-error.ts:3: ERR_701_LAYER_BREACH: Failure code must reference core/errors.ts\r\n"
+    },
+    {
+      "name": "opaque_browser_frame",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10481,
+      "output": "components/ui/Opaque.tsx:3: ERR_705_UNVERIFIABLE_CONSTRUCT: Opaque browser execution element is unsupported: iframe\r\ncomponents/ui/Opaque.tsx:3: ERR_705_UNVERIFIABLE_CONSTRUCT: Opaque browser source injection is unsupported\r\n"
+    },
+    {
+      "name": "opaque_css",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10549,
+      "output": "core/styles.css:31: ERR_705_UNVERIFIABLE_CONSTRUCT: Unsupported stylesheet syntax\r\n"
+    },
+    {
+      "name": "opaque_html_injection",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10467,
+      "output": "components/ui/OpaqueHtml.tsx:3: ERR_705_UNVERIFIABLE_CONSTRUCT: Opaque browser source injection is unsupported\r\n"
+    },
+    {
+      "name": "opaque_intrinsic_callback",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10500,
+      "output": "primitives/opaque-callback.ts:5: ERR_705_UNVERIFIABLE_CONSTRUCT: Intrinsic callbacks require explicit verified wrappers\r\n"
+    },
+    {
+      "name": "opaque_iterator",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10443,
+      "output": "primitives/iterator.ts:5: ERR_705_UNVERIFIABLE_CONSTRUCT: Only explicit arrays, tuples, and strings have verified iteration effects\r\n"
+    },
+    {
+      "name": "opaque_namespace_alias",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10256,
+      "output": "primitives/namespace.ts:3: ERR_705_UNVERIFIABLE_CONSTRUCT: Shared registry and namespace objects require explicit member reads\r\n"
+    },
+    {
+      "name": "opaque_object_spread",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10974,
+      "output": "primitives/spread.ts:3: ERR_705_UNVERIFIABLE_CONSTRUCT: Object spread hides property access effects; use explicit field mappings\r\nprimitives/spread.ts:3: ERR_705_UNVERIFIABLE_CONSTRUCT: Shared registry and namespace objects require explicit member reads\r\n"
+    },
+    {
+      "name": "primitive_io",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10640,
+      "output": "primitives/io.ts:1: ERR_701_LAYER_BREACH: Unlisted entry point for primitives: node:fs/promises\r\n"
+    },
+    {
+      "name": "pure_module_substrate_state",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10471,
+      "output": "primitives/random-consumer.ts:3: ERR_701_LAYER_BREACH: Stateful substrate hooks cannot execute inside pure modules\r\n"
+    },
+    {
+      "name": "raw_performance_clock",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10285,
+      "output": "primitives/performance.ts:2: ERR_703_NONDETERMINISTIC_CALL: Deterministic substrate call outside core/constants.ts\r\nprimitives/performance.ts:2: ERR_703_NONDETERMINISTIC_CALL: Raw platform clock or entropy reference outside core\r\nprimitives/performance.ts:2: ERR_703_NONDETERMINISTIC_CALL: Raw substrate member reference outside core\r\nprimitives/performance.ts:2: ERR_703_NONDETERMINISTIC_CALL: Raw substrate reference cannot be aliased\r\n"
+    },
+    {
+      "name": "regional_indicator_emoji",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10535,
+      "output": "primitives/clamp.ts:8: ERR_702_WEIGHT_EXCEEDED: Comment exceeds technical documentation rules\r\n"
+    },
+    {
+      "name": "reject_language",
+      "args": [
+        "init",
+        "python",
+        "--lang=py"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 61,
+      "output": "<cli>:1: ERR_705_UNVERIFIABLE_CONSTRUCT: Usage: ostean init project-name --lang=ts; only ts is supported\r\n"
+    },
+    {
+      "name": "reject_overwrite",
+      "args": [
+        "init",
+        "reference"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 59,
+      "output": "<engine>:1: ERR_705_UNVERIFIABLE_CONSTRUCT: TypeError: Destination already exists\r\n"
+    },
+    {
+      "name": "renderer_recovery",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10595,
+      "output": "runtime/main.ts:29: ERR_705_UNVERIFIABLE_CONSTRUCT: Renderer call lacks canonical recovery\r\nruntime/main.ts:29: ERR_705_UNVERIFIABLE_CONSTRUCT: Renderer handler lacks immediate canonical dispatch: onCaughtError\r\nruntime/main.ts:29: ERR_705_UNVERIFIABLE_CONSTRUCT: Renderer handler lacks immediate canonical dispatch: onRecoverableError\r\nruntime/main.ts:29: ERR_705_UNVERIFIABLE_CONSTRUCT: Renderer handler lacks immediate canonical dispatch: onUncaughtError\r\nruntime/main.ts:35: ERR_705_UNVERIFIABLE_CONSTRUCT: Renderer call lacks canonical recovery\r\nruntime/main.ts:38: ERR_705_UNVERIFIABLE_CONSTRUCT: Renderer call lacks canonical recovery\r\n"
+    },
+    {
+      "name": "runtime_arithmetic",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 9951,
+      "output": "runtime/main.ts:47: ERR_701_LAYER_BREACH: Runtime calculations belong in domain modules\r\n"
+    },
+    {
+      "name": "runtime_intrinsic_calculation",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10458,
+      "output": "runtime/main.ts:47: ERR_701_LAYER_BREACH: Runtime calculations belong in domain modules\r\n"
+    },
+    {
+      "name": "runtime_tests_import",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 9983,
+      "output": "runtime/main.ts:47: ERR_701_LAYER_BREACH: Forbidden import: runtime/main.ts -> tests/public/contracts.ts\r\n"
+    },
+    {
+      "name": "service_without_port",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 11040,
+      "output": "services/unmockable.ts:2: ERR_701_LAYER_BREACH: Service exports require canonical mockable method interfaces\r\n"
+    },
+    {
+      "name": "structural_clone",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 13155,
+      "output": "components/clones.ts:8: ERR_704_DUPLICATION_BREACH: Normalized AST clone; first at components/clones.ts:2\r\n"
+    },
+    {
+      "name": "test_reference",
+      "args": [
+        "test"
+      ],
+      "exit": 0,
+      "signal": null,
+      "milliseconds": 11371,
+      "output": "Verified compliance: 15 sources; TypeScript 5.7.3; declared external trust boundary\r\n{\"ok\":true,\"public\":{\"ok\":true,\"passed\":9,\"total\":9},\"private\":{\"ok\":true,\"passed\":128,\"total\":128,\"executed\":128,\"categories\":[32,32,32,32],\"seed\":1729}}\r\n"
+    },
+    {
+      "name": "ui_cycle",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 12238,
+      "output": "components/ui/CycleA.ts:1: ERR_701_LAYER_BREACH: UI dependency cycle\r\ncomponents/ui/CycleA.ts:1: ERR_701_LAYER_BREACH: UI exceeds two composition hops\r\ncomponents/ui/CycleB.ts:1: ERR_701_LAYER_BREACH: UI exceeds two composition hops\r\n"
+    },
+    {
+      "name": "ui_depth",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 12183,
+      "output": "components/ui/Overflow.tsx:1: ERR_701_LAYER_BREACH: UI exceeds two composition hops\r\n"
+    },
+    {
+      "name": "unbound_mount_lookup",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10783,
+      "output": "runtime/main.ts:24: ERR_705_UNVERIFIABLE_CONSTRUCT: Mount lookup requires an explicit bound document method\r\n"
+    },
+    {
+      "name": "undocumented_core_contract",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10930,
+      "output": "core/schemas.ts:3: ERR_702_WEIGHT_EXCEEDED: Core contract requires a single technical comment\r\n"
+    },
+    {
+      "name": "unlisted_deep_entrypoint",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10145,
+      "output": "components/ui/deep-entry.ts:1: ERR_701_LAYER_BREACH: Unlisted entry point for components/ui: react/cjs/unapproved\r\n"
+    },
+    {
+      "name": "unlisted_missing_dependency",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 9917,
+      "output": "primitives/missing-sdk.ts:1: ERR_701_LAYER_BREACH: Unlisted entry point for primitives: axios\r\n"
+    },
+    {
+      "name": "unobserved_service_promise",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10116,
+      "output": "services/promise-escape.ts:5: ERR_705_UNVERIFIABLE_CONSTRUCT: Service promises must be awaited inside canonical recovery\r\n"
+    },
+    {
+      "name": "unpinned_package",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 389,
+      "output": "ostean.json:1: ERR_705_UNVERIFIABLE_CONSTRUCT: Dependency pin mismatch: react\r\npackage.json:1: ERR_705_UNVERIFIABLE_CONSTRUCT: Unpinned dependency: react\r\n"
+    },
+    {
+      "name": "unpunctuated_banned_marker",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 10278,
+      "output": "primitives/clamp.ts:8: ERR_702_WEIGHT_EXCEEDED: Comment exceeds technical documentation rules\r\n"
+    },
+    {
+      "name": "unsupported_literal_kind",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10616,
+      "output": "primitives/unsupported-literal.ts:2: ERR_705_UNVERIFIABLE_CONSTRUCT: Unsupported literal syntax: BigIntLiteral\r\n"
+    },
+    {
+      "name": "unsupported_socket_source",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 9803,
+      "output": "services/hidden.mts:1: ERR_705_UNVERIFIABLE_CONSTRUCT: Unsupported project artifact format\r\n"
+    },
+    {
+      "name": "untyped_export",
+      "args": [
+        "check"
+      ],
+      "exit": 2,
+      "signal": null,
+      "milliseconds": 10635,
+      "output": "primitives/untyped.ts:2: ERR_705_UNVERIFIABLE_CONSTRUCT: Export return requires explicit canonical contract\r\n"
+    },
+    {
+      "name": "weight",
+      "args": [
+        "check"
+      ],
+      "exit": 1,
+      "signal": null,
+      "milliseconds": 12777,
+      "output": "primitives/clamp.ts:1: ERR_702_WEIGHT_EXCEEDED: Source has 58 lines; cap is 50\r\n"
+    }
+  ],
+  "commands": 88,
+  "ok": true
+}

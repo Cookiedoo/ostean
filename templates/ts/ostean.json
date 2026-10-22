@@ -1,0 +1,45 @@
+{
+  "$schema": "./ostean.schema.json",
+  "schemaVersion": 1,
+  "identity": "Ostean",
+  "release": "v_final",
+  "language": "ts",
+  "languageSocket": { "name": "typescript", "version": "5.7.3" },
+  "runtimeVersion": "24.18.0",
+  "lineLimits": {
+    "core": 150, "primitives": 50, "components": 100,
+    "services": 150, "workflows": 150, "runtime": 100
+  },
+  "comments": { "functionWords": 10, "coreTokenWords": 5 },
+  "ui": { "directory": "components/ui", "maxCompositionHops": 2 },
+  "verification": {
+    "failClosed": true,
+    "cloneStatements": 3,
+    "cloneNodes": 15,
+    "canonicalCoreFiles": ["constants.ts", "errors.ts", "schemas.ts", "styles.css"]
+  },
+  "testing": { "seed": 1729, "privateCases": 128 },
+  "externalDependencies": {
+    "core": {},
+    "primitives": {},
+    "components": {},
+    "components/ui": {
+      "react": {
+        "version": "19.0.0",
+        "entrypoints": ["react", "react/jsx-runtime"]
+      }
+    },
+    "services": {
+      "node": {
+        "version": "builtin",
+        "entrypoints": ["node:fs/promises", "node:crypto"]
+      }
+    },
+    "workflows": {},
+    "runtime": {
+      "node": { "version": "builtin", "entrypoints": ["node:process"] },
+      "react-dom": { "version": "19.0.0", "entrypoints": ["react-dom/client"] }
+    },
+    "tests": {}
+  }
+}

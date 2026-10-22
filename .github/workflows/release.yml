@@ -1,0 +1,80 @@
+name: Verified native release
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  native:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-2025
+            key: win32-x64
+          - os: ubuntu-24.04
+            key: linux-x64
+          - os: ubuntu-24.04-arm
+            key: linux-arm64
+          - os: macos-15-intel
+            key: darwin-x64
+          - os: macos-15
+            key: darwin-arm64
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444
+        with:
+          node-version: 24.18.0
+      - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
+        with:
+          python-version: '3.12'
+      - name: Prepare pinned inputs
+        run: python native/prepare.py work
+      - name: Build standalone binary
+        run: python native/build.py work
+      - name: Verify TypeScript socket
+        run: node tests/socket.mjs work
+      - name: Verify native reference and adversarial fixtures
+        run: node tests/acceptance.mjs
+      - name: Measure complete command latency
+        shell: bash
+        run: node tests/performance.mjs > PERFORMANCE_PROOF.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: native-${{ matrix.key }}
+          path: |
+            bin/
+            NATIVE_PROOF.json
+            SOCKET_BUILD_PROOF.json
+            PERFORMANCE_PROOF.json
+          if-no-files-found: error
+  package:
+    needs: native
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444
+        with:
+          node-version: 24.18.0
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with:
+          pattern: native-*
+          path: work/platforms
+      - name: Assemble proved platform binaries
+        run: node distribution/assemble.mjs work/platforms darwin-arm64,darwin-x64,linux-arm64,linux-x64,win32-x64
+      - name: Pack npm release
+        run: npm pack ./distribution/create-ostean --ignore-scripts --pack-destination dist
+      - name: Verify packed npm commands
+        run: node tests/distribution.mjs
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: create-ostean-package
+          path: |
+            dist/
+            DISTRIBUTION_PROOF.json
+            distribution/create-ostean/manifest.json
+          if-no-files-found: error

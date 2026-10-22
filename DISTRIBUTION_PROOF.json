@@ -1,0 +1,81 @@
+{
+  "archiveSha256": "4ceece1c942176b3d394d51ac57711d40439f36cd9f9aeb04c4d69f1c3df2ced",
+  "dispatcher": [
+    {
+      "platform": "win32",
+      "status": 0,
+      "tampered": false,
+      "initialize": true,
+      "exit": 0
+    },
+    {
+      "platform": "win32",
+      "status": 1,
+      "tampered": false,
+      "initialize": false,
+      "exit": 1
+    },
+    {
+      "platform": "win32",
+      "status": 2,
+      "tampered": false,
+      "initialize": false,
+      "exit": 2
+    },
+    {
+      "platform": "win32",
+      "status": 0,
+      "tampered": true,
+      "initialize": false,
+      "exit": 2
+    },
+    {
+      "platform": "linux",
+      "status": 0,
+      "tampered": false,
+      "initialize": true,
+      "exit": 2
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "create-ostean",
+        "reference",
+        "--lang=ts"
+      ],
+      "exit": 0,
+      "stdout": "Initialized Ostean (v_final): reference\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ostean",
+        "check"
+      ],
+      "exit": 0,
+      "stdout": "Verified compliance: 15 sources; TypeScript 5.7.3; declared external trust boundary\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ostean",
+        "test"
+      ],
+      "exit": 0,
+      "stdout": "Verified compliance: 15 sources; TypeScript 5.7.3; declared external trust boundary\r\n{\"ok\":true,\"public\":{\"ok\":true,\"passed\":9,\"total\":9},\"private\":{\"ok\":true,\"passed\":128,\"total\":128,\"executed\":128,\"categories\":[32,32,32,32],\"seed\":1729}}\r\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "create-ostean",
+        "unsupported",
+        "--lang=py"
+      ],
+      "exit": 2,
+      "stdout": "<cli>:1: ERR_705_UNVERIFIABLE_CONSTRUCT: Usage: ostean init project-name --lang=ts; only ts is supported\r\n",
+      "stderr": ""
+    }
+  ],
+  "ok": true
+}

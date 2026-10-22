@@ -1,0 +1,31 @@
+:root {
+  /* Small spacing unit. */
+  --u-space-sm: 0.5rem;
+  /* Medium spacing unit. */
+  --u-space-md: 1rem;
+  /* Large spacing unit. */
+  --u-space-lg: 2rem;
+  /* Header height bound. */
+  --u-top-h: 4rem;
+  /* Footer height bound. */
+  --u-bottom-h: 3rem;
+  /* Surface background color. */
+  --u-bg: #101820;
+  /* Primary text color. */
+  --u-fg: #f2f5f7;
+  /* Highlight accent color. */
+  --u-accent: #87d7b5;
+  /* Content width bound. */
+  --u-content-max: 64rem;
+  /* Panel corner radius. */
+  --u-radius: 0.5rem;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--u-bg); color: var(--u-fg); }
+.u-center { display: grid; place-items: center; }
+.u-app { display: grid; place-items: center; padding: var(--u-space-lg); }
+.u-panel { width: 100%; max-width: var(--u-content-max); padding: var(--u-space-md); border-radius: var(--u-radius); }
+.u-value { color: var(--u-accent); }
+header { min-height: var(--u-top-h); }
+footer { min-height: var(--u-bottom-h); }

@@ -1,0 +1,860 @@
+[
+  {
+    "name": "layer_upward",
+    "exit": 1,
+    "code": 701,
+    "writes": {
+      "primitives/breach.ts": "import { parseReading } from \"../components/parse-reading.js\";\n// Expose the forbidden upward dependency.\nexport function breach(): number { return 0; }\n"
+    }
+  },
+  {
+    "name": "weight",
+    "exit": 1,
+    "code": 702,
+    "append": {
+      "primitives/clamp.ts": "\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n// Weight boundary.\n"
+    }
+  },
+  {
+    "name": "nondeterministic_clock",
+    "exit": 1,
+    "code": 703,
+    "writes": {
+      "primitives/clock.ts": "// Read an uncontrolled timestamp.\nexport function clock(): number { return Date.now(); }\n"
+    }
+  },
+  {
+    "name": "duplicate_literal",
+    "exit": 1,
+    "code": 704,
+    "writes": {
+      "components/duplicate.ts": "// Repeat an unregistered numerical threshold.\nexport function duplicate(): number {\n  const left = 23;\n  const right = 23;\n  return left + right;\n}\n"
+    }
+  },
+  {
+    "name": "dynamic_import",
+    "exit": 2,
+    "code": 705,
+    "writes": {
+      "services/dynamic.ts": "// Load an opaque runtime dependency.\nexport async function dynamic(): Promise<void> { await import(\"../core/constants.js\"); }\n"
+    }
+  },
+  {
+    "name": "structural_clone",
+    "exit": 1,
+    "code": 704,
+    "writes": {
+      "components/clones.ts": "// Transform the first local value.\nexport function first(value: number): number {\n const one = value + 1;\n const two = one * one;\n return two;\n}\n// Transform the second local value.\nexport function second(input: number): number {\n const alpha = input + 1;\n const beta = alpha * alpha;\n return beta;\n}\n"
+    }
+  },
+  {
+    "name": "ui_depth",
+    "exit": 1,
+    "code": 701,
+    "writes": {
+      "components/ui/Overflow.tsx": "import { Presentation } from \"./Presentation.js\";\n// Declare an excessive composition edge.\nexport function overflow(): number { return 0; }\n"
+    }
+  },
+  {
+    "name": "ui_cycle",
+    "exit": 1,
+    "code": 701,
+    "writes": {
+      "components/ui/CycleA.ts": "import { cycleB } from \"./CycleB.js\";\n// Declare the first cycle edge.\nexport function cycleA(): number { return 0; }\n",
+      "components/ui/CycleB.ts": "import { cycleA } from \"./CycleA.js\";\n// Declare the second cycle edge.\nexport function cycleB(): number { return 0; }\n"
+    }
+  },
+  {
+    "name": "headless_ui",
+    "exit": 1,
+    "code": 701,
+    "writes": {
+      "workflows/presentation.ts": "import { Presentation } from \"../components/ui/Presentation.js\";\n// Reference a forbidden presentation dependency.\nexport function breach(): number { return 0; }\n"
+    }
+  },
+  {
+    "name": "primitive_io",
+    "exit": 1,
+    "code": 701,
+    "writes": {
+      "primitives/io.ts": "import { readFile } from \"node:fs/promises\";\n// Reference an unauthorized external entrypoint.\nexport function breach(): number { return 0; }\n"
+    }
+  },
+  {
+    "name": "alias_state",
+    "exit": 1,
+    "code": 701,
+    "writes": {
+      "primitives/alias.ts": "import type { ValueStore, Reading, Result } from \"../core/schemas.js\";\n// Invoke a stateful method indirectly.\nexport function alias(store: ValueStore): Result<Reading> {\n const read = store.read;\n return read();\n}\n"
+    }
+  },
+  {
+    "name": "alias_dom",
+    "exit": 1,
+    "code": 701,
+    "append": {
+      "runtime/main.ts": "\n// Invoke an unapproved DOM method indirectly.\nfunction escape(): void {\n const create = document.createElement;\n create(MOUNT_ID);\n}\n"
+    }
+  },
+  {
+    "name": "core_date",
+    "exit": 1,
+    "code": 701,
+    "append": {
+      "core/constants.ts": "\n// Raw ambient constructor.\nexport const AmbientDate = Date;\n"
+    },
+    "writes": {
+      "primitives/ambient.ts": "import { AmbientDate } from \"../core/constants.js\";\n// Acquire an uncontrolled timestamp.\nexport function ambient(): void { const value = new AmbientDate(); }\n"
+    }
+  },
+  {
+    "name": "core_logic",
+    "exit": 1,
+    "code": 701,
+    "append": {
+      "core/constants.ts": "\n// Mutable domain registry.\nexport let domainValue = 0;\ndomainValue += 1;\n"
+    }
+  },
+  {
+    "name": "renderer_recovery",
+    "exit": 2,
+    "code": 705,
+    "replace": [
+      [
+        "runtime/main.ts",
+        "    failureLog.record({ code: Codes.UPSTREAM_FAILURE });",
+        "  return;"
+      ]
+    ]
+  },
+  {
+    "name": "mount_null_mapping",
+    "exit": 2,
+    "code": 705,
+    "replace": [
+      [
+        "runtime/main.ts",
+        "    failureLog.record({ code: Codes.ENTITY_MISSING });",
+        "    Codes.ENTITY_MISSING;"
+      ]
+    ]
+  },
+  {
+    "name": "fabricated_private_report",
+    "exit": 2,
+    "code": 705,
+    "command": "test",
+    "writes": {
+      "tests/private/stress.ts": "import { PRIVATE_CASES } from \"../../core/constants.js\";\nimport type { TestReport } from \"../../core/schemas.js\";\n// Report an unearned execution count.\nexport function runStress(): TestReport { return { ok: true, passed: PRIVATE_CASES, total: PRIVATE_CASES }; }\n"
+    }
+  },
+  {
+    "name": "compiler_pragma",
+    "exit": 2,
+    "code": 705,
+    "writes": {
+      "primitives/suppressed.ts": "// @ts-nocheck\n// Return an invalid canonical annotation.\nexport function suppressed(): number { return \"WRONG\"; }\n"
+    }
+  },
+  {
+    "name": "generic_contract",
+    "exit": 2,
+    "code": 705,
+    "writes": {
+      "primitives/echo.ts": "// Forward an unconstrained structural payload.\nexport function echo<T>(value: T): T { return value; }\n",
+      "components/unregistered.ts": "import { echo } from \"../primitives/echo.js\";\n// Pass an unregistered structural contract.\nexport function unregistered(): void { echo({ unregisteredShape: true }); }\n"
+    }
+  },
+  {
+    "name": "false_dependency_pin",
+    "exit": 2,
+    "code": 705,
+    "json": [
+      [
+        "ostean.json",
+        [
+          "externalDependencies",
+          "components/ui",
+          "react",
+          "version"
+        ],
+        "99.0.0"
+      ],
+      [
+        "package.json",
+        [
+          "dependencies",
+          "react"
+        ],
+        "99.0.0"
+      ]
+    ]
+  },
+  {
+    "name": "erased_ui_node",
+    "exit": 2,
+    "code": 701,
+    "writes": {
+      "components/ui/erased.tsx": "import type { RawInput } from \"../../core/schemas.js\";\n// Hide a renderer node inside scalar data.\nexport function erased(): RawInput { return { value: <div/> }; }\n"
+    },
+    "append": {
+      "runtime/main.ts": "\nimport { erased } from \"../components/ui/erased.js\";\nimport { parseReading } from \"../components/parse-reading.js\";\nparseReading(erased());\n"
+    }
+  },
+  {
+    "name": "dom_event_leak",
+    "exit": 2,
+    "code": 701,
+    "writes": {
+      "components/ui/event.ts": "import { parseReading } from \"../parse-reading.js\";\n// Forward a DOM event into domain parsing.\nexport function event(): void {\n // Cross the boundary with an interactive event.\n function forward(value: MouseEvent): void { parseReading({ value }); }\n}\n"
+    }
+  },
+  {
+    "name": "untyped_export",
+    "exit": 2,
+    "code": 705,
+    "writes": {
+      "primitives/untyped.ts": "// Return an inferred boundary value.\nexport function untyped(value: number) { return value; }\n"
+    }
+  },
+  {
+    "name": "unpinned_package",
+    "exit": 2,
+    "code": 705,
+    "json": [
+      [
+        "package.json",
+        [
+          "dependencies",
+          "react"
+        ],
+        "^19.0.0"
+      ]
+    ]
+  },
+  {
+    "name": "ambient_process",
+    "exit": 2,
+    "code": 705,
+    "writes": {
+      "services/ambient.ts": "// Read an undeclared ambient environment.\nexport function ambient(): void { const value = process.env; }\n"
+    }
+  },
+  {
+    "name": "inline_visual",
+    "exit": 1,
+    "code": 701,
+    "writes": {
+      "components/ui/Inline.tsx": "import type { ReactElement } from \"react\";\n// Render an unauthorized inline visual value.\nexport function Inline(): ReactElement { return <div style={{margin: 0}}/>; }\n"
+    }
+  },
+  {
+    "name": "opaque_css",
+    "exit": 2,
+    "code": 705,
+    "append": {
+      "core/styles.css": "\n@import \"unverified.css\";\n"
+    }
+  },
+  {
+    "name": "css_comment_weight",
+    "exit": 1,
+    "code": 702,
+    "append": {
+      "core/styles.css": "\n/* This token comment exceeds five permitted words. */\n"
+    }
+  },
+  {
+    "name": "unsupported_socket_source",
+    "exit": 2,
+    "code": 705,
+    "writes": {
+      "services/hidden.mts": "export const hidden = Date.now();\n"
+    }
+  },
+  {
+    "name": "numeric_error",
+    "exit": 1,
+    "code": 701,
+    "writes": {
+      "components/numeric-error.ts": "import type { Failure } from \"../core/schemas.js\";\n// Return an unregistered inline error code.\nexport function numericError(): Failure { return { ok: false, code: 404 }; }\n"
+    }
+  },
+  {
+    "name": "core_helpers",
+    "exit": 1,
+    "code": 701,
+    "writes": {
+      "core/helpers.ts": "// Illegal helper constant.\nexport const ILLEGAL = 0;\n"
+    }
+  },
+  {
+    "name": "expression_reflection",
+    "exit": 2,
+    "code": 705,
+    "writes": {
+      "services/reflection.ts": "// Execute an opaque runtime program.\nexport function reflection(): void { eval(\"\"); }\n"
+    }
+  },
+  {
+    "name": "legal_free_bindings",
+    "exit": 0,
+    "writes": {
+      "components/free.ts": "import { VALUE_MIN, VALUE_MAX } from \"../core/constants.js\";\n// Transform around the lower canonical bound.\nexport function lower(value: number): number {\n const base = VALUE_MIN;\n const next = base + value;\n return next;\n}\n// Transform around the upper canonical bound.\nexport function upper(input: number): number {\n const base = VALUE_MAX;\n const next = base + input;\n return next;\n}\n"
+    }
+  },
+  {
+    "name": "legal_ui_data_edge",
+    "exit": 0,
+    "append": {
+      "components/ui/Presentation.tsx": "\nimport { parseReading } from \"../parse-reading.js\";\n"
+    }
+  },
+  {
+    "name": "legal_ui_event_local",
+    "exit": 0,
+    "append": {
+      "components/ui/Value.tsx": "\n// Retain an interactive event inside presentation.\nfunction localEvent(event: React.MouseEvent): void { }\n"
+    }
+  },
+  {
+    "name": "alternate_seed",
+    "exit": 0,
+    "command": "test",
+    "json": [
+      [
+        "ostean.json",
+        [
+          "testing",
+          "seed"
+        ],
+        1234567
+      ]
+    ]
+  },
+  {
+    "name": "service_without_port",
+    "exit": 1,
+    "code": 701,
+    "writes": {
+      "services/unmockable.ts": "// Expose state without a mockable interface.\nexport function unmockable(): number { return 0; }\n"
+    }
+  },
+  {
+    "name": "runtime_arithmetic",
+    "exit": 1,
+    "code": 701,
+    "append": {
+      "runtime/main.ts": "\nconst calculation = DEMO_VALUE * INITIAL_VALUE;\n"
+    }
+  },
+  {
+    "name": "inline_standard_control",
+    "exit": 1,
+    "code": 701,
+    "writes": {
+      "components/ui/Unmastered.tsx": "import type { ReactElement } from \"react\";\n// Render a control outside its master module.\nexport function Unmastered(): ReactElement { return <button/>; }\n"
+    }
+  },
+  {
+    "name": "literal_failure_dispatch",
+    "exit": 1,
+    "code": 701,
+    "writes": {
+      "components/literal-failure.ts": "import { failure } from \"../primitives/result.js\";\nimport type { Failure } from \"../core/schemas.js\";\n// Dispatch an inline unregistered numerical code.\nexport function literalFailure(): Failure { return failure(404); }\n"
+    }
+  },
+  {
+    "name": "aliased_failure_dispatch",
+    "exit": 1,
+    "code": 701,
+    "writes": {
+      "components/alias-failure.ts": "import { failure } from \"../primitives/result.js\";\nimport type { Failure } from \"../core/schemas.js\";\n// Dispatch an aliased inline numerical code.\nexport function aliasFailure(): Failure {\n const code = 404;\n return failure(code);\n}\n"
+    }
+  },
+  {
+    "name": "legal_master_control",
+    "exit": 0,
+    "writes": {
+      "components/ui/Button.tsx": "import type { ReactElement } from \"react\";\n// Render the canonical master button.\nexport function Button(): ReactElement { return <button/>; }\n"
+    }
+  },
+  {
+    "name": "intrinsic_container_alias",
+    "exit": 2,
+    "code": 701,
+    "replace": [
+      [
+        "services/value-store.ts",
+        "  let current: Reading = { value: clamp(initial.value) };",
+        "  const intrinsics = [Number];\n  const intrinsic = intrinsics[0];\n  if (intrinsic) intrinsic.isFinite = Number.isNaN;\n  let current: Reading = { value: clamp(initial.value) };"
+      ]
+    ],
+    "reason": "The constructor is transported as an opaque callback; trusted-member mutation remains ERR_701, while ERR_705 selects exit 2."
+  },
+  {
+    "name": "ambient_browser_value",
+    "exit": 2,
+    "code": 705,
+    "writes": {
+      "primitives/browser.ts": "// Read an ambient hardware threshold.\nexport function hardware(): number { return navigator.hardwareConcurrency; }\n"
+    }
+  },
+  {
+    "name": "dependency_resolution_override",
+    "exit": 2,
+    "code": 705,
+    "json": [
+      [
+        "package.json",
+        [
+          "exports"
+        ],
+        {
+          ".": "./services/value-store.ts"
+        }
+      ]
+    ]
+  },
+  {
+    "name": "erased_error_registry_type",
+    "exit": 2,
+    "code": 705,
+    "replace": [
+      [
+        "core/errors.ts",
+        "export type FailureCode = Exclude<SignalCode, LifecycleCode | CompletionCode | RoutingCode>;",
+        "export type FailureCode = number;"
+      ]
+    ]
+  },
+  {
+    "name": "empty_core_helpers",
+    "exit": 1,
+    "code": 701,
+    "directories": [
+      "core/helpers"
+    ]
+  },
+  {
+    "name": "noncanonical_core_metadata",
+    "exit": 1,
+    "code": 701,
+    "writes": {
+      "core/extra.md": "Unregistered core metadata.\n"
+    }
+  },
+  {
+    "name": "inferred_any_contract",
+    "exit": 2,
+    "code": 705,
+    "append": {
+      "core/schemas.ts": "\n// Opaque inferred payload.\nexport type ErasedValue = ReturnType<typeof JSON.parse>;\n"
+    }
+  },
+  {
+    "name": "opaque_iterator",
+    "exit": 2,
+    "code": 705,
+    "append": {
+      "core/schemas.ts": "\n// Canonical iteration boundary.\nexport type CanonicalSet = ReadonlySet<number>;\n"
+    },
+    "writes": {
+      "primitives/iterator.ts": "import type { CanonicalSet } from \"../core/schemas.js\";\n// Iterate an opaque stateful collection.\nexport function iterate(values: CanonicalSet): number {\n let total = 0;\n for (const value of values) total += value;\n return total;\n}\n"
+    }
+  },
+  {
+    "name": "external_getter_recovery",
+    "exit": 2,
+    "code": 705,
+    "json": [
+      [
+        "ostean.json",
+        [
+          "externalDependencies",
+          "services",
+          "node",
+          "entrypoints"
+        ],
+        [
+          "node:fs/promises",
+          "node:crypto",
+          "node:process"
+        ]
+      ]
+    ],
+    "append": {
+      "services/value-store.ts": "\nimport process from \"node:process\";\n"
+    },
+    "replace": [
+      [
+        "services/value-store.ts",
+        "  let current: Reading = { value: clamp(initial.value) };",
+        "  const environment = process.env;\n  let current: Reading = { value: clamp(initial.value) };"
+      ]
+    ]
+  },
+  {
+    "name": "unobserved_service_promise",
+    "exit": 2,
+    "code": 705,
+    "append": {
+      "core/schemas.ts": "\n// Mockable promise boundary.\nexport interface AsyncReadingPort {\n // Read canonical data asynchronously.\n read(): Promise<Result<Reading>>;\n}\n"
+    },
+    "writes": {
+      "services/promise-escape.ts": "import type { AsyncReadingPort, Result, Reading } from \"../core/schemas.js\";\n// Expose an unobserved asynchronous boundary.\nexport function createEscape(future: Promise<Result<Reading>>): AsyncReadingPort {\n // Return an unobserved external rejection.\n function read(): Promise<Result<Reading>> { return future; }\n return { read };\n}\n"
+    }
+  },
+  {
+    "name": "runtime_tests_import",
+    "exit": 1,
+    "code": 701,
+    "append": {
+      "runtime/main.ts": "\nimport { runPublic } from \"../tests/public/contracts.js\";\n"
+    }
+  },
+  {
+    "name": "unpunctuated_banned_marker",
+    "exit": 1,
+    "code": 702,
+    "append": {
+      "primitives/clamp.ts": "\n// TODO\n"
+    }
+  },
+  {
+    "name": "regional_indicator_emoji",
+    "exit": 1,
+    "code": 702,
+    "append": {
+      "primitives/clamp.ts": "\n// \ud83c\uddfa\ud83c\uddf3\n"
+    }
+  },
+  {
+    "name": "raw_performance_clock",
+    "exit": 1,
+    "code": 703,
+    "writes": {
+      "primitives/performance.ts": "// Read an uncontrolled monotonic clock.\nexport function uncontrolled(): number { return performance.now(); }\n"
+    }
+  },
+  {
+    "name": "undocumented_core_contract",
+    "exit": 1,
+    "code": 702,
+    "replace": [
+      [
+        "core/schemas.ts",
+        "// Canonical successful result envelope.\n",
+        ""
+      ]
+    ]
+  },
+  {
+    "name": "unsupported_literal_kind",
+    "exit": 2,
+    "code": 705,
+    "writes": {
+      "primitives/unsupported-literal.ts": "// Declare an unsupported scalar literal.\nexport function unsupported(): void { const value = 2n; }\n"
+    }
+  },
+  {
+    "name": "core_object_mutation",
+    "exit": 1,
+    "code": 701,
+    "append": {
+      "core/constants.ts": "\n// Mutable token object.\nexport const TOKEN_STATE = {\n // Current hidden state.\n value: 0\n};\n",
+      "services/value-store.ts": "\nimport { TOKEN_STATE } from \"../core/constants.js\";\n"
+    },
+    "replace": [
+      [
+        "services/value-store.ts",
+        "  let current: Reading = { value: clamp(initial.value) };",
+        "  TOKEN_STATE.value += 1;\n  let current: Reading = { value: clamp(initial.value) };"
+      ]
+    ]
+  },
+  {
+    "name": "core_object_alias",
+    "exit": 2,
+    "code": 705,
+    "append": {
+      "core/constants.ts": "\n// Mutable token object.\nexport const TOKEN_STATE = {\n // Current hidden state.\n value: 0\n};\n",
+      "services/value-store.ts": "\nimport { TOKEN_STATE } from \"../core/constants.js\";\n"
+    },
+    "replace": [
+      [
+        "services/value-store.ts",
+        "  let current: Reading = { value: clamp(initial.value) };",
+        "  const alias: { value: number } = TOKEN_STATE;\n  alias.value += 1;\n  let current: Reading = { value: clamp(initial.value) };"
+      ]
+    ]
+  },
+  {
+    "name": "opaque_intrinsic_callback",
+    "exit": 2,
+    "code": 705,
+    "append": {
+      "core/schemas.ts": "\n// Canonical scalar callback.\nexport type ScalarAction = () => string;\n// Callback transport envelope.\nexport interface ActionEnvelope {\n readonly run: ScalarAction;\n}\n"
+    },
+    "writes": {
+      "primitives/opaque-callback.ts": "import type { ActionEnvelope } from \"../core/schemas.js\";\n// Forward an opaque intrinsic callback.\nexport function opaque(): ActionEnvelope {\n const object = {};\n return { run: object.toString };\n}\n"
+    }
+  },
+  {
+    "name": "unbound_mount_lookup",
+    "exit": 2,
+    "code": 705,
+    "replace": [
+      [
+        "runtime/main.ts",
+        "  const target = document.getElementById(MOUNT_ID);",
+        "  const lookup = document.getElementById;\n  const target = lookup(MOUNT_ID);"
+      ]
+    ]
+  },
+  {
+    "name": "opaque_browser_frame",
+    "exit": 2,
+    "code": 705,
+    "writes": {
+      "components/ui/Opaque.tsx": "import type { ReactElement } from \"react\";\n// Embed an opaque executable document.\nexport function Opaque(): ReactElement { return <iframe srcDoc={\"<script>opaque()</script>\"}/>; }\n"
+    }
+  },
+  {
+    "name": "aliased_browser_frame",
+    "exit": 2,
+    "code": 705,
+    "writes": {
+      "components/ui/Opaque.tsx": "import type { ReactElement } from \"react\";\nconst Frame = \"iframe\" as const;\n// Embed an aliased executable document.\nexport function Opaque(): ReactElement { return <Frame src={\"about:blank\"}/>; }\n"
+    }
+  },
+  {
+    "name": "inline_stylesheet_element",
+    "exit": 1,
+    "code": 701,
+    "writes": {
+      "components/ui/InlineSheet.tsx": "import type { ReactElement } from \"react\";\n// Emit an unauthorized inline stylesheet.\nexport function InlineSheet(): ReactElement { return <style>{\"body{color:red}\"}</style>; }\n"
+    }
+  },
+  {
+    "name": "opaque_html_injection",
+    "exit": 2,
+    "code": 705,
+    "writes": {
+      "components/ui/OpaqueHtml.tsx": "import type { ReactElement } from \"react\";\n// Inject an opaque executable fragment.\nexport function OpaqueHtml(): ReactElement { return <div dangerouslySetInnerHTML={{__html: \"<script>opaque()</script>\"}}/>; }\n"
+    }
+  },
+  {
+    "name": "legal_intrinsic_alias",
+    "exit": 0,
+    "writes": {
+      "primitives/absolute.ts": "// Invoke an explicitly resolved pure intrinsic.\nexport function absolute(value: number): number {\n const abs = Math.abs;\n return abs(value);\n}\n"
+    }
+  },
+  {
+    "name": "legal_registry_iteration",
+    "exit": 0,
+    "append": {
+      "core/constants.ts": "\n// Registered scalar offsets.\nexport const OFFSETS = [0, 1] as const;\n"
+    },
+    "writes": {
+      "primitives/offsets.ts": "import { OFFSETS } from \"../core/constants.js\";\n// Sum registered scalar offsets.\nexport function sumOffsets(): number {\n let total = 0;\n for (const offset of OFFSETS) total += offset;\n return total;\n}\n"
+    }
+  },
+  {
+    "name": "runtime_intrinsic_calculation",
+    "exit": 1,
+    "code": 701,
+    "append": {
+      "runtime/main.ts": "\nconst calculation = Math.abs(DEMO_VALUE);\n"
+    }
+  },
+  {
+    "name": "pure_module_substrate_state",
+    "exit": 1,
+    "code": 701,
+    "writes": {
+      "primitives/random-consumer.ts": "import { randomUnit } from \"../core/constants.js\";\n// Consume mutable substrate state inside a primitive.\nexport function consume(): number { return randomUnit(); }\n"
+    }
+  },
+  {
+    "name": "unlisted_missing_dependency",
+    "exit": 1,
+    "code": 701,
+    "writes": {
+      "primitives/missing-sdk.ts": "import axios from \"axios\";\n// Declare an unauthorized external dependency.\nexport function missing(): void { axios.get(\"\"); }\n"
+    }
+  },
+  {
+    "name": "unlisted_deep_entrypoint",
+    "exit": 1,
+    "code": 701,
+    "writes": {
+      "components/ui/deep-entry.ts": "import { hidden } from \"react/cjs/unapproved\";\n// Declare an unauthorized package subpath.\nexport function deep(): void { }\n"
+    }
+  },
+  {
+    "name": "mixed_line_terminator_weight",
+    "exit": 1,
+    "code": 702,
+    "append": {
+      "primitives/clamp.ts": "\n// Weight boundary.\r// Weight boundary.\u2028// Weight boundary.\u2029// Weight boundary.\r// Weight boundary.\u2028// Weight boundary.\u2029// Weight boundary.\r// Weight boundary.\u2028// Weight boundary.\u2029// Weight boundary.\r// Weight boundary.\u2028// Weight boundary.\u2029// Weight boundary.\r// Weight boundary.\u2028// Weight boundary.\u2029// Weight boundary.\r// Weight boundary.\u2028// Weight boundary.\u2029// Weight boundary.\r// Weight boundary.\u2028// Weight boundary.\u2029// Weight boundary.\r// Weight boundary.\u2028// Weight boundary.\u2029// Weight boundary.\r// Weight boundary.\u2028// Weight boundary.\u2029// Weight boundary.\r// Weight boundary.\u2028// Weight boundary.\u2029// Weight boundary.\r// Weight boundary.\u2028// Weight boundary.\u2029// Weight boundary.\r// Weight boundary.\u2028// Weight boundary.\u2029// Weight boundary.\r// Weight boundary.\u2028// Weight boundary.\u2029// Weight boundary.\r// Weight boundary.\u2028// Weight boundary.\u2029// Weight boundary.\r// Weight boundary.\u2028// Weight boundary.\u2029// Weight boundary.\r// Weight boundary.\u2028// Weight boundary.\u2029// Weight boundary.\r// Weight boundary.\u2028// Weight boundary.\u2029"
+    }
+  },
+  {
+    "name": "multiline_core_token",
+    "exit": 1,
+    "code": 702,
+    "replace": [
+      [
+        "core/constants.ts",
+        "// Lower numeric bound.",
+        "/* Lower\rnumeric bound. */"
+      ]
+    ]
+  },
+  {
+    "name": "ambient_callable_erasure",
+    "exit": 2,
+    "code": 705,
+    "writes": {
+      "primitives/ambient-callable.ts": "import type { Reading } from \"../core/schemas.js\";\n// Declare an unverifiable external implementation.\ndeclare function erase<T>(): T;\n// Fabricate an unverified canonical payload.\nexport function fabricate(): Reading { return erase<Reading>(); }\n"
+    }
+  },
+  {
+    "name": "global_intrinsic_binding",
+    "exit": 1,
+    "code": 701,
+    "replace": [
+      [
+        "services/value-store.ts",
+        "  let current: Reading = { value: clamp(initial.value) };",
+        "  Math = Math;\n  let current: Reading = { value: clamp(initial.value) };"
+      ]
+    ]
+  },
+  {
+    "name": "opaque_object_spread",
+    "exit": 2,
+    "code": 705,
+    "writes": {
+      "primitives/spread.ts": "// Copy an opaque intrinsic namespace.\nexport function spread(): number {\n const copy = { ...Math };\n return copy.max(0, 1);\n}\n"
+    }
+  },
+  {
+    "name": "dynamic_builtin_loader",
+    "exit": 2,
+    "code": 705,
+    "json": [
+      [
+        "ostean.json",
+        [
+          "externalDependencies",
+          "services",
+          "node",
+          "entrypoints"
+        ],
+        [
+          "node:fs/promises",
+          "node:crypto",
+          "node:process"
+        ]
+      ]
+    ],
+    "append": {
+      "services/value-store.ts": "\nimport process from \"node:process\";\nimport { Codes } from \"../core/errors.js\";\n"
+    },
+    "replace": [
+      [
+        "services/value-store.ts",
+        "  let current: Reading = { value: clamp(initial.value) };",
+        "  try {\n    const loaded = process.getBuiltinModule(\"node:fs\");\n  } catch {\n    failure(Codes.UPSTREAM_FAILURE);\n  }\n  let current: Reading = { value: clamp(initial.value) };"
+      ]
+    ]
+  },
+  {
+    "name": "aliased_platform_clock",
+    "exit": 1,
+    "code": 703,
+    "json": [
+      [
+        "ostean.json",
+        [
+          "externalDependencies",
+          "services",
+          "node",
+          "entrypoints"
+        ],
+        [
+          "node:fs/promises",
+          "node:crypto",
+          "node:perf_hooks"
+        ]
+      ]
+    ],
+    "append": {
+      "services/value-store.ts": "\nimport { performance } from \"node:perf_hooks\";\nimport { Codes } from \"../core/errors.js\";\n"
+    },
+    "replace": [
+      [
+        "services/value-store.ts",
+        "  let current: Reading = { value: clamp(initial.value) };",
+        "  try {\n    const clock = performance;\n    clock.now();\n  } catch {\n    failure(Codes.UPSTREAM_FAILURE);\n  }\n  let current: Reading = { value: clamp(initial.value) };"
+      ]
+    ]
+  },
+  {
+    "name": "aliased_hrtime_clock",
+    "exit": 1,
+    "code": 703,
+    "json": [
+      [
+        "ostean.json",
+        [
+          "externalDependencies",
+          "services",
+          "node",
+          "entrypoints"
+        ],
+        [
+          "node:fs/promises",
+          "node:crypto",
+          "node:process"
+        ]
+      ]
+    ],
+    "append": {
+      "services/value-store.ts": "\nimport process from \"node:process\";\nimport { Codes } from \"../core/errors.js\";\n"
+    },
+    "replace": [
+      [
+        "services/value-store.ts",
+        "  let current: Reading = { value: clamp(initial.value) };",
+        "  try {\n    const clock = process.hrtime;\n    clock();\n  } catch {\n    failure(Codes.UPSTREAM_FAILURE);\n  }\n  let current: Reading = { value: clamp(initial.value) };"
+      ]
+    ]
+  },
+  {
+    "name": "crypto_random_integer",
+    "exit": 1,
+    "code": 703,
+    "append": {
+      "services/value-store.ts": "\nimport { randomInt } from \"node:crypto\";\nimport { Codes } from \"../core/errors.js\";\n"
+    },
+    "replace": [
+      [
+        "services/value-store.ts",
+        "  let current: Reading = { value: clamp(initial.value) };",
+        "  try {\n    randomInt(1);\n  } catch {\n    failure(Codes.UPSTREAM_FAILURE);\n  }\n  let current: Reading = { value: clamp(initial.value) };"
+      ]
+    ]
+  },
+  {
+    "name": "opaque_namespace_alias",
+    "exit": 2,
+    "code": 705,
+    "writes": {
+      "primitives/namespace.ts": "// Capture an opaque intrinsic namespace.\nexport function namespace(): number {\n const shared = Math;\n return shared.max(0, 1);\n}\n"
+    }
+  }
+]

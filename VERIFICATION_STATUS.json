@@ -1,0 +1,55 @@
+{
+  "release": "Ostean (v_final)",
+  "status": "verified_local_production",
+  "deliverable1": {
+    "complete": true,
+    "typescript": "5.7.3",
+    "sourceFiles": 15,
+    "public": {
+      "ok": true,
+      "passed": 9,
+      "total": 9
+    },
+    "private": {
+      "ok": true,
+      "passed": 128,
+      "total": 128
+    },
+    "hostileClockChecks": 6
+  },
+  "deliverable2": {
+    "complete": true,
+    "platform": "windows-x64",
+    "binary": "bin/ostean.exe",
+    "binaryBytes": 20170868,
+    "sha256": "bc51824320b802312ed2f4050e18d05240e887ee3f0546f870477820545c5418",
+    "verifiedNativeCommands": 88,
+    "adversarialAndControlFixtures": 82
+  },
+  "deliverable3": {
+    "complete": true,
+    "archive": "dist/create-ostean-1.0.0.tgz",
+    "sha256": "4ceece1c942176b3d394d51ac57711d40439f36cd9f9aeb04c4d69f1c3df2ced",
+    "npmExecutionCommands": 4,
+    "dispatcherControls": 5,
+    "publishedToRegistry": false
+  },
+  "scope": "Project static compliance within the supported TypeScript socket, conditional on declared pinned external entrypoints",
+  "platforms": {
+    "windows-x64": "built and verified",
+    "other": "native source provided; target builds and tests required"
+  },
+  "proofs": [
+    "SOCKET_BUILD_PROOF.json",
+    "NATIVE_PROOF.json",
+    "DISTRIBUTION_PROOF.json"
+  ],
+  "latency": {
+    "measuredMilliseconds": {
+      "check_reference": 11381,
+      "init_reference": 2226,
+      "test_reference": 11371
+    },
+    "originalLatencyTargetsMet": false
+  }
+}

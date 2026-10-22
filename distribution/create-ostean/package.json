@@ -1,0 +1,12 @@
+{
+  "name": "create-ostean",
+  "version": "1.0.0",
+  "description": "Ostean (v_final): verified athletic TypeScript architecture",
+  "license": "MIT",
+  "bin": {
+    "create-ostean": "bin/create-ostean.cjs",
+    "ostean": "bin/ostean.cjs"
+  },
+  "engines": { "node": "24.18.0" },
+  "files": ["bin/", "native/", "licenses/", "manifest.json", "README.md", "LICENSE", "THIRD_PARTY.md"]
+}

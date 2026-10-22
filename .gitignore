@@ -1,0 +1,6 @@
+work/
+dist/
+bin/
+distribution/create-ostean/native/
+distribution/create-ostean/manifest.json
+PACK_MANIFEST.json
