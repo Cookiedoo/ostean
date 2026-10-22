@@ -731,6 +731,17 @@ Source: native/analyzer/platform.js
 
 # Native Release Completion Gates
 
+## Release: tests/registry.mjs
+
+[INTENT]
+Verify the published scaffold through a fresh public npm installation.
+
+[PSEUDOCODE]
+Require registry integrity evidence; invoke public npx; verify generated contracts and stress execution.
+
+[CODE]
+Source: tests/registry.mjs
+
 ## Release: native/init.cpp
 
 [INTENT]

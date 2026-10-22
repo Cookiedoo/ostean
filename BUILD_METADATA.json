@@ -1,7 +1,9 @@
 {
-  "nativeSha256": "bc51824320b802312ed2f4050e18d05240e887ee3f0546f870477820545c5418",
-  "sourceInputs": {
-    "native/analyzer/base.js": "f4c4d73a585651505a21b4a4f6c3c027508e4598b4aeb6b0781bbf2ac053888c",
+  "sourceCommitVerified": "c3e15ba3511d22b90afb4e072ce6a4a0fd37468d",
+  "workflowRun": "https://github.com/Cookiedoo/ostean/actions/runs/39810415161",
+  "packagingWorkflowRun": "https://github.com/Cookiedoo/ostean/actions/runs/39824531627",
+  "deliveredInputs": {
+    "native/analyzer/base.js": "021c1ec0b1d403bbcb808dbed397083e027d7348cb29f56e56c545a4497dafeb",
     "native/analyzer/bootstrap.js": "4190d561d3688ef318db9149cf0d5dc0440d3c3bddccdf72bab5c81a58239a65",
     "native/analyzer/capabilities.js": "997cce0adc933efa1ba9cf43de469f1c68394594b035a6f66539bf0002e7ca21",
     "native/analyzer/clones.js": "e54c0d810adc128e790db6e4d5581a9a1678d3eaba4b1d6a137e558f149fad30",
@@ -16,7 +18,7 @@
     "native/analyzer/imports.js": "fc6df3e734c73a1d01b46fb230f4257c65071384edf1e07e81293568e44cdec1",
     "native/analyzer/literals.js": "46b8962b787cffffc1ae7b5398f53afae5cc48dcd32ca1657c3b58b7fa9620fa",
     "native/analyzer/platform.js": "2b13952325d53b24bb79f0ed51cb3552e6603d0701408a3de751f5e64e8d2979",
-    "native/analyzer/program.js": "0ed9309d70356675ff9dc066ca146049090be812f4e4326241953b6dfdb18cae",
+    "native/analyzer/program.js": "4b9182a7be9af5e5adaebcc2fd98b2a9b71856f3dacc7cafa3f2693757174288",
     "native/analyzer/purity.js": "2a7b427e7072c837273afad6ed24c88b8b9760ed332025863e3424d509cb3bc7",
     "native/analyzer/README.md": "8ed5d5d043446a0bd8bf4c4f461ed8e0b1cdba60fa0813ac07b821d6e3b9a643",
     "native/analyzer/recovery.js": "e3c0a368d1647e9661503e2771ec54c5518a55a2a468f7c4ac66943fb5cd3634",
@@ -27,13 +29,15 @@
     "native/analyzer/syntax.js": "0fb34612d8fdd937022b2310c618d939b18326f15e993f716980e6ad3e0cd003",
     "native/analyzer/test-runner.js": "bb95a8335b2bbbbba22c5f22790b1152b2a7b22682b98b5893b6b4d6293fa32a",
     "native/analyzer/weight.js": "edead12a8b993a74976c4d1a1fa7a8d03ff61767a0591a64678e7e13d7afc7d4",
-    "native/build.py": "c8dd4ed0718d36a467731fc6531cbc3a92e098bedc76e905849d72e2924d12f3",
+    "native/build.py": "ae39cd45942ae1fabd7e1841726d13ec8ab0463f261fa99273863653c396ef39",
+    "native/bytecode.cpp": "79450ad90da750a76875ae789f7f879b0f8867c3e5731074b7eb0bc83f502f7b",
     "native/filesystem.cpp": "321b1bf77bf384881392e75955539b44bf5e4c24afa185c4707caa281fe5fd3f",
-    "native/host.hpp": "dbcf3bcf8a4a3144cd77bf3a17c75ba21dc77eefe205f835e304a7c419c76229",
+    "native/host.hpp": "f8d4d797c7baa57629c6c0a7e8e5343c6e8ffd0d84f526e80b8fd839dc9c529b",
+    "native/init.cpp": "42aa0d5cb22bfe4610314d6813ea0eae76939993f68f695782de89c3d4d40602",
     "native/isolation.cpp": "4c0c0e48aa749fac721f19cec8e387f542cf00efc5d930b455e6502a509f6ab8",
-    "native/main.cpp": "005460a1289ba5dc3867981daf9d1ce790fef66c0894251d782c37dc45ec918e",
+    "native/main.cpp": "bc9db65c5fb747b3e49882c923ef8a676cc18e640cc0c4383ea22c55e69305d3",
     "native/prepare.py": "df0584252291120f88d27d579a6b6665c662e2719b8a65f46024a450de2bbded",
-    "native/README.md": "2470e81d1b80bb3b351bd742303621aa969381c93d400528e6dcb5ecd37466d5",
+    "native/README.md": "15293f34ee4a1fdd79d9949c150fe197ded1b25a144d51a3f411efd841161fab",
     "native/scaffold.cpp": "b2957ab8f0140d9afc5d7fe23f7265b46ee1ef142b7edd4d6f42148e2a0b8e60",
     "native/toolchain/package-lock.json": "8758c1450c48d5ec531ff0e3aa9863f2dc6768114ec68ddec2c237ae5914669d",
     "native/toolchain/package.json": "9691fe6b7ecec0d0d91151d2fb6b9dc60f895a224039ecfd8b0d4dddd9a8a826",
@@ -68,7 +72,138 @@
     "templates/ts/workflows/README.md": "efe22b93b1d6d2a19f704abcb8abe6789b98528a9e594502e8c0ed3e59bb2b41",
     "templates/ts/workflows/update-reading.ts": "3dceca75f49f15d5a30afc1e96ece8e392dc1519e3f5297b7e35b45ed93fc366"
   },
-  "compiler": "g++ (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r1) 16.2.0",
+  "platforms": {
+    "darwin-arm64": {
+      "nativeCommands": 88,
+      "binarySha256": "2d7dbee0f235eb2c852f57c73333dad6e5d20e12c9d26064c73efe9a4dd36d89",
+      "latency": {
+        "platform": "darwin",
+        "architecture": "arm64",
+        "scope": "Fresh process; local reference tree; filesystem cache uncontrolled",
+        "init": {
+          "samples": [
+            10.936082999999996,
+            9.673374999999993,
+            6.544583999999986,
+            10.073999999999984,
+            6.2464999999999975
+          ],
+          "medianMilliseconds": 9.673374999999993,
+          "targetMilliseconds": 10,
+          "targetMet": true
+        },
+        "check": {
+          "milliseconds": 11597.60725,
+          "targetMilliseconds": 20,
+          "targetMet": false
+        }
+      }
+    },
+    "darwin-x64": {
+      "nativeCommands": 88,
+      "binarySha256": "46eda6eb0c29b92974b017a959b61eb3b8de2cefec5f9ee2ad75559a2aadc410",
+      "latency": {
+        "platform": "darwin",
+        "architecture": "x64",
+        "scope": "Fresh process; local reference tree; filesystem cache uncontrolled",
+        "init": {
+          "samples": [
+            48.141526999999996,
+            36.11482100000006,
+            38.95307100000002,
+            24.953251000000023,
+            25.683786000000055
+          ],
+          "medianMilliseconds": 36.11482100000006,
+          "targetMilliseconds": 10,
+          "targetMet": false
+        },
+        "check": {
+          "milliseconds": 33634.508889000004,
+          "targetMilliseconds": 20,
+          "targetMet": false
+        }
+      }
+    },
+    "linux-arm64": {
+      "nativeCommands": 88,
+      "binarySha256": "d4987e3d8c8aeb416296ee6e6f6bedf9eb9a2e7a955ccd58a7417ba5084d9e45",
+      "latency": {
+        "platform": "linux",
+        "architecture": "arm64",
+        "scope": "Fresh process; local reference tree; filesystem cache uncontrolled",
+        "init": {
+          "samples": [
+            3.6163370000000015,
+            2.7626959999999983,
+            2.615113000000001,
+            3.207083000000001,
+            2.606425999999999
+          ],
+          "medianMilliseconds": 2.7626959999999983,
+          "targetMilliseconds": 10,
+          "targetMet": true
+        },
+        "check": {
+          "milliseconds": 8003.272825999999,
+          "targetMilliseconds": 20,
+          "targetMet": false
+        }
+      }
+    },
+    "linux-x64": {
+      "nativeCommands": 88,
+      "binarySha256": "870a2fc0ce0ba34331d36f19ac21e452a8829c7dd99f6a5d56012d5938e84523",
+      "latency": {
+        "platform": "linux",
+        "architecture": "x64",
+        "scope": "Fresh process; local reference tree; filesystem cache uncontrolled",
+        "init": {
+          "samples": [
+            4.7544020000000025,
+            3.507111000000002,
+            3.377307000000002,
+            4.065559,
+            3.456659000000002
+          ],
+          "medianMilliseconds": 3.507111000000002,
+          "targetMilliseconds": 10,
+          "targetMet": true
+        },
+        "check": {
+          "milliseconds": 11808.794096,
+          "targetMilliseconds": 20,
+          "targetMet": false
+        }
+      }
+    },
+    "win32-x64": {
+      "nativeCommands": 88,
+      "binarySha256": "ae8bc3aede9f9d1702cfd8efe3b2a98e9459910a24953c7bd910064225730a8c",
+      "latency": {
+        "platform": "win32",
+        "architecture": "x64",
+        "scope": "Fresh process; local reference tree; filesystem cache uncontrolled",
+        "init": {
+          "samples": [
+            31.854100000000003,
+            24.527,
+            21.536500000000004,
+            22.3613,
+            21.349999999999994
+          ],
+          "medianMilliseconds": 22.3613,
+          "targetMilliseconds": 10,
+          "targetMet": false
+        },
+        "check": {
+          "milliseconds": 12809.605599999999,
+          "targetMilliseconds": 20,
+          "targetMet": false
+        }
+      }
+    }
+  },
   "quickjs": {
     "version": "2026-06-04",
     "archiveSha256": "b376e839b322978313d929fd20663b11ba58b75df5a46c126dd19ea2fa70ad2a"

@@ -1,0 +1,12 @@
+{
+  "name": "create-ostean",
+  "version": "1.0.0",
+  "registry": "https://registry.npmjs.org/",
+  "url": "https://www.npmjs.com/package/create-ostean",
+  "integrity": "sha512-cFaBqBdqRMl31nDzXqgaSWC4TtFGYbnOG22khYsVAUzUImpRzeAw01jo3sLbjgOcnPWuIk9eJoOLD+Dlicrg5Q==",
+  "archiveSha256": "1975e1f66065ff8ec31356b47e627433027b4caf3fca5a9224a52eb629f75b13",
+  "exactArchiveVerified": true,
+  "tarball": "https://registry.npmjs.org/create-ostean/-/create-ostean-1.0.0.tgz",
+  "maintainer": "hydracookie",
+  "verifiedAt": "2026-10-22T17:47:20.175263+00:00"
+}

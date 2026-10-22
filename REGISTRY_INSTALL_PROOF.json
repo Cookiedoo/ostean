@@ -1,0 +1,60 @@
+{
+  "registry": "https://registry.npmjs.org/",
+  "version": "1.0.0",
+  "archiveSha256": "1975e1f66065ff8ec31356b47e627433027b4caf3fca5a9224a52eb629f75b13",
+  "commands": [
+    {
+      "entry": "npx-cli.js",
+      "args": [
+        "--yes",
+        "--prefer-online",
+        "--ignore-scripts",
+        "--cache",
+        "C:\\Users\\Strong Cook\\Documents\\Codex\\2026-10-21\\th\\work\\registry-install-BlTDEM\\cache",
+        "create-ostean@latest",
+        "reference",
+        "--lang=ts"
+      ],
+      "exit": 0,
+      "stdout": "Initialized Ostean (v_final): reference\r\n",
+      "stderr": "npm notice\nnpm notice New major version of npm available! 11.16.0 -> 12.2.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1\nnpm notice To update run: npm install -g npm@12.2.1\nnpm notice\n"
+    },
+    {
+      "entry": "npm-cli.js",
+      "args": [
+        "exec",
+        "--yes",
+        "--prefer-online",
+        "--ignore-scripts",
+        "--cache",
+        "C:\\Users\\Strong Cook\\Documents\\Codex\\2026-10-21\\th\\work\\registry-install-BlTDEM\\cache",
+        "--package=create-ostean@1.0.0",
+        "--",
+        "ostean",
+        "check"
+      ],
+      "exit": 0,
+      "stdout": "Verified compliance: 15 sources; TypeScript 5.7.3; declared external trust boundary\r\n",
+      "stderr": ""
+    },
+    {
+      "entry": "npm-cli.js",
+      "args": [
+        "exec",
+        "--yes",
+        "--prefer-online",
+        "--ignore-scripts",
+        "--cache",
+        "C:\\Users\\Strong Cook\\Documents\\Codex\\2026-10-21\\th\\work\\registry-install-BlTDEM\\cache",
+        "--package=create-ostean@1.0.0",
+        "--",
+        "ostean",
+        "test"
+      ],
+      "exit": 0,
+      "stdout": "Verified compliance: 15 sources; TypeScript 5.7.3; declared external trust boundary\r\n{\"ok\":true,\"public\":{\"ok\":true,\"passed\":9,\"total\":9},\"private\":{\"ok\":true,\"passed\":128,\"total\":128,\"executed\":128,\"categories\":[32,32,32,32],\"seed\":1729}}\r\n",
+      "stderr": ""
+    }
+  ],
+  "ok": true
+}

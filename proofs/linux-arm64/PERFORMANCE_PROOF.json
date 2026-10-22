@@ -1,0 +1,22 @@
+{
+  "platform": "linux",
+  "architecture": "arm64",
+  "scope": "Fresh process; local reference tree; filesystem cache uncontrolled",
+  "init": {
+    "samples": [
+      3.6163370000000015,
+      2.7626959999999983,
+      2.615113000000001,
+      3.207083000000001,
+      2.606425999999999
+    ],
+    "medianMilliseconds": 2.7626959999999983,
+    "targetMilliseconds": 10,
+    "targetMet": true
+  },
+  "check": {
+    "milliseconds": 8003.272825999999,
+    "targetMilliseconds": 20,
+    "targetMet": false
+  }
+}

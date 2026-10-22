@@ -1,0 +1,22 @@
+{
+  "platform": "win32",
+  "architecture": "x64",
+  "scope": "Fresh process; local reference tree; filesystem cache uncontrolled",
+  "init": {
+    "samples": [
+      31.854100000000003,
+      24.527,
+      21.536500000000004,
+      22.3613,
+      21.349999999999994
+    ],
+    "medianMilliseconds": 22.3613,
+    "targetMilliseconds": 10,
+    "targetMet": false
+  },
+  "check": {
+    "milliseconds": 12809.605599999999,
+    "targetMilliseconds": 20,
+    "targetMet": false
+  }
+}

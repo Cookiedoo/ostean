@@ -1,15 +1,24 @@
 # Ostean Production Status
 
-All three local deliverables are complete and verified for Windows x64.
+Published create-ostean@1.0.0 to npm.
 
-- Canonical TypeScript socket: 15 sources; 9 public checks; 128 private cases; 6 hostile-clock checks.
-- Native verifier: 88 recorded command outcomes, including every required error class.
-- Distribution: four packed npm commands and five dispatcher controls passed.
+Windows x64, Linux x64/ARM64, and macOS x64/ARM64 each passed 88 native command checks (440 total).
+Each socket passed 9 public checks, 128 seeded stress cases, and 6 hostile-clock checks.
+The packed npm pathway passed on Linux in CI and Windows locally.
 
-Native binary SHA-256: `bc51824320b802312ed2f4050e18d05240e887ee3f0546f870477820545c5418`.
+Fresh-cache public npx scaffolding, check, and test passed after publication.
 
-Measured initialization: 2226 ms; reference check: 11381 ms. The embedded semantic compiler prioritizes full supported-subset analysis; this build does not meet the original initialization or check latency aspirations.
+| Platform | Median init (ms) | Complete check (ms) |
+| --- | ---: | ---: |
+| darwin-arm64 | 9.67 | 11597.61 |
+| darwin-x64 | 36.11 | 33634.51 |
+| linux-arm64 | 2.76 | 8003.27 |
+| linux-x64 | 3.51 | 11808.79 |
+| win32-x64 | 22.36 | 12809.61 |
 
-The npm archive is tested locally and has not been published. Other operating systems have build source but no tested release binary in this bundle.
+The original latency limits remain unmet. All measurements include fresh process startup; filesystem cache state is uncontrolled.
+Initialization bypasses JavaScript. Trusted compiler bytecode and per-run source/directory caches preserve semantic verification.
+No project compliance result is reused across runs.
 
-See VERIFICATION_STATUS.json, NATIVE_PROOF.json, DISTRIBUTION_PROOF.json, and SUPPORTED_TYPESCRIPT.md for evidence and scope.
+Package SHA-256: `1975e1f66065ff8ec31356b47e627433027b4caf3fca5a9224a52eb629f75b13`.
+Platform proofs are under proofs/. Registry evidence is in NPM_PUBLICATION_PROOF.json when published.

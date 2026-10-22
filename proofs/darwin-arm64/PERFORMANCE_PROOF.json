@@ -1,0 +1,22 @@
+{
+  "platform": "darwin",
+  "architecture": "arm64",
+  "scope": "Fresh process; local reference tree; filesystem cache uncontrolled",
+  "init": {
+    "samples": [
+      10.936082999999996,
+      9.673374999999993,
+      6.544583999999986,
+      10.073999999999984,
+      6.2464999999999975
+    ],
+    "medianMilliseconds": 9.673374999999993,
+    "targetMilliseconds": 10,
+    "targetMet": true
+  },
+  "check": {
+    "milliseconds": 11597.60725,
+    "targetMilliseconds": 20,
+    "targetMet": false
+  }
+}

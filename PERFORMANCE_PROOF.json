@@ -4,18 +4,18 @@
   "scope": "Fresh process; local reference tree; filesystem cache uncontrolled",
   "init": {
     "samples": [
-      46.251999999999995,
-      30.7992,
-      32.18979999999999,
-      36.02889999999999,
-      34.92169999999999
+      31.854100000000003,
+      24.527,
+      21.536500000000004,
+      22.3613,
+      21.349999999999994
     ],
-    "medianMilliseconds": 34.92169999999999,
+    "medianMilliseconds": 22.3613,
     "targetMilliseconds": 10,
     "targetMet": false
   },
   "check": {
-    "milliseconds": 11877.923299999999,
+    "milliseconds": 12809.605599999999,
     "targetMilliseconds": 20,
     "targetMet": false
   }

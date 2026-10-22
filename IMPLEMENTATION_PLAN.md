@@ -61,3 +61,11 @@ Produces: npm dispatcher, package archive, and machine-readable proof.
 - [x] Record all results and remaining platform limitations.
 
 Completion: see VERIFICATION_STATUS.json for recorded proof and platform scope.
+
+## Release completion
+
+- [x] Verify Windows x64, Linux x64/ARM64, and macOS x64/ARM64.
+- [x] Publish create-ostean@1.0.0 and verify public registry integrity.
+- [x] Execute public npx scaffolding, native check, and native tests.
+- [ ] Meet the 10 ms initialization target on every measured platform.
+- [ ] Meet the 20 ms fresh-process semantic verification target.

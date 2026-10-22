@@ -1,55 +1,150 @@
 {
   "release": "Ostean (v_final)",
-  "status": "verified_local_production",
-  "deliverable1": {
-    "complete": true,
-    "typescript": "5.7.3",
-    "sourceFiles": 15,
-    "public": {
-      "ok": true,
-      "passed": 9,
-      "total": 9
-    },
-    "private": {
-      "ok": true,
-      "passed": 128,
-      "total": 128
-    },
-    "hostileClockChecks": 6
-  },
-  "deliverable2": {
-    "complete": true,
-    "platform": "windows-x64",
-    "binary": "bin/ostean.exe",
-    "binaryBytes": 20170868,
-    "sha256": "bc51824320b802312ed2f4050e18d05240e887ee3f0546f870477820545c5418",
-    "verifiedNativeCommands": 88,
-    "adversarialAndControlFixtures": 82
-  },
-  "deliverable3": {
-    "complete": true,
-    "archive": "dist/create-ostean-1.0.0.tgz",
-    "sha256": "4ceece1c942176b3d394d51ac57711d40439f36cd9f9aeb04c4d69f1c3df2ced",
-    "npmExecutionCommands": 4,
-    "dispatcherControls": 5,
-    "publishedToRegistry": false
-  },
-  "scope": "Project static compliance within the supported TypeScript socket, conditional on declared pinned external entrypoints",
+  "npmVersion": "1.0.0",
+  "status": "published_with_unmet_latency_targets",
+  "repository": "https://github.com/Cookiedoo/ostean",
+  "publishedToRegistry": true,
   "platforms": {
-    "windows-x64": "built and verified",
-    "other": "native source provided; target builds and tests required"
-  },
-  "proofs": [
-    "SOCKET_BUILD_PROOF.json",
-    "NATIVE_PROOF.json",
-    "DISTRIBUTION_PROOF.json"
-  ],
-  "latency": {
-    "measuredMilliseconds": {
-      "check_reference": 11381,
-      "init_reference": 2226,
-      "test_reference": 11371
+    "darwin-arm64": {
+      "nativeCommands": 88,
+      "binarySha256": "2d7dbee0f235eb2c852f57c73333dad6e5d20e12c9d26064c73efe9a4dd36d89",
+      "latency": {
+        "platform": "darwin",
+        "architecture": "arm64",
+        "scope": "Fresh process; local reference tree; filesystem cache uncontrolled",
+        "init": {
+          "samples": [
+            10.936082999999996,
+            9.673374999999993,
+            6.544583999999986,
+            10.073999999999984,
+            6.2464999999999975
+          ],
+          "medianMilliseconds": 9.673374999999993,
+          "targetMilliseconds": 10,
+          "targetMet": true
+        },
+        "check": {
+          "milliseconds": 11597.60725,
+          "targetMilliseconds": 20,
+          "targetMet": false
+        }
+      }
     },
-    "originalLatencyTargetsMet": false
-  }
+    "darwin-x64": {
+      "nativeCommands": 88,
+      "binarySha256": "46eda6eb0c29b92974b017a959b61eb3b8de2cefec5f9ee2ad75559a2aadc410",
+      "latency": {
+        "platform": "darwin",
+        "architecture": "x64",
+        "scope": "Fresh process; local reference tree; filesystem cache uncontrolled",
+        "init": {
+          "samples": [
+            48.141526999999996,
+            36.11482100000006,
+            38.95307100000002,
+            24.953251000000023,
+            25.683786000000055
+          ],
+          "medianMilliseconds": 36.11482100000006,
+          "targetMilliseconds": 10,
+          "targetMet": false
+        },
+        "check": {
+          "milliseconds": 33634.508889000004,
+          "targetMilliseconds": 20,
+          "targetMet": false
+        }
+      }
+    },
+    "linux-arm64": {
+      "nativeCommands": 88,
+      "binarySha256": "d4987e3d8c8aeb416296ee6e6f6bedf9eb9a2e7a955ccd58a7417ba5084d9e45",
+      "latency": {
+        "platform": "linux",
+        "architecture": "arm64",
+        "scope": "Fresh process; local reference tree; filesystem cache uncontrolled",
+        "init": {
+          "samples": [
+            3.6163370000000015,
+            2.7626959999999983,
+            2.615113000000001,
+            3.207083000000001,
+            2.606425999999999
+          ],
+          "medianMilliseconds": 2.7626959999999983,
+          "targetMilliseconds": 10,
+          "targetMet": true
+        },
+        "check": {
+          "milliseconds": 8003.272825999999,
+          "targetMilliseconds": 20,
+          "targetMet": false
+        }
+      }
+    },
+    "linux-x64": {
+      "nativeCommands": 88,
+      "binarySha256": "870a2fc0ce0ba34331d36f19ac21e452a8829c7dd99f6a5d56012d5938e84523",
+      "latency": {
+        "platform": "linux",
+        "architecture": "x64",
+        "scope": "Fresh process; local reference tree; filesystem cache uncontrolled",
+        "init": {
+          "samples": [
+            4.7544020000000025,
+            3.507111000000002,
+            3.377307000000002,
+            4.065559,
+            3.456659000000002
+          ],
+          "medianMilliseconds": 3.507111000000002,
+          "targetMilliseconds": 10,
+          "targetMet": true
+        },
+        "check": {
+          "milliseconds": 11808.794096,
+          "targetMilliseconds": 20,
+          "targetMet": false
+        }
+      }
+    },
+    "win32-x64": {
+      "nativeCommands": 88,
+      "binarySha256": "ae8bc3aede9f9d1702cfd8efe3b2a98e9459910a24953c7bd910064225730a8c",
+      "latency": {
+        "platform": "win32",
+        "architecture": "x64",
+        "scope": "Fresh process; local reference tree; filesystem cache uncontrolled",
+        "init": {
+          "samples": [
+            31.854100000000003,
+            24.527,
+            21.536500000000004,
+            22.3613,
+            21.349999999999994
+          ],
+          "medianMilliseconds": 22.3613,
+          "targetMilliseconds": 10,
+          "targetMet": false
+        },
+        "check": {
+          "milliseconds": 12809.605599999999,
+          "targetMilliseconds": 20,
+          "targetMet": false
+        }
+      }
+    }
+  },
+  "verifiedNativeCommands": 440,
+  "packedCommands": 4,
+  "dispatcherControls": 5,
+  "archiveSha256": "1975e1f66065ff8ec31356b47e627433027b4caf3fca5a9224a52eb629f75b13",
+  "publicRegistryCommands": 3,
+  "originalLatencyTargetsMet": false,
+  "unmetRequirements": [
+    "Initialization below 10 ms on every target",
+    "Fresh-process complete semantic verification below 20 ms"
+  ],
+  "scope": "Project static compliance within the supported TypeScript socket, conditional on declared pinned external entrypoints"
 }

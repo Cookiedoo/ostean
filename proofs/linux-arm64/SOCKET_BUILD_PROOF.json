@@ -1,0 +1,16 @@
+{
+  "typescript": "5.7.3",
+  "files": 15,
+  "public": {
+    "ok": true,
+    "passed": 9,
+    "total": 9
+  },
+  "private": {
+    "ok": true,
+    "passed": 128,
+    "total": 128
+  },
+  "clockChecks": 6,
+  "architecturalVerification": "See NATIVE_PROOF.json for native verification of the emitted socket"
+}

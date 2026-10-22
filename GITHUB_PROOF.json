@@ -1,0 +1,64 @@
+[
+  {
+    "run": {
+      "id": 39810415161,
+      "head_sha": "c3e15ba3511d22b90afb4e072ce6a4a0fd37468d",
+      "status": "completed",
+      "conclusion": "failure",
+      "html_url": "https://github.com/Cookiedoo/ostean/actions/runs/39810415161"
+    },
+    "jobs": [
+      {
+        "name": "native (macos-15, darwin-arm64)",
+        "conclusion": "success",
+        "html_url": "https://github.com/Cookiedoo/ostean/actions/runs/39810415161/job/119935151155"
+      },
+      {
+        "name": "native (windows-2025, win32-x64)",
+        "conclusion": "success",
+        "html_url": "https://github.com/Cookiedoo/ostean/actions/runs/39810415161/job/119935151485"
+      },
+      {
+        "name": "native (ubuntu-24.04-arm, linux-arm64)",
+        "conclusion": "success",
+        "html_url": "https://github.com/Cookiedoo/ostean/actions/runs/39810415161/job/119935151493"
+      },
+      {
+        "name": "native (ubuntu-24.04, linux-x64)",
+        "conclusion": "success",
+        "html_url": "https://github.com/Cookiedoo/ostean/actions/runs/39810415161/job/119935151548"
+      },
+      {
+        "name": "native (macos-15-intel, darwin-x64)",
+        "conclusion": "success",
+        "html_url": "https://github.com/Cookiedoo/ostean/actions/runs/39810415161/job/119935152041"
+      },
+      {
+        "name": "package",
+        "conclusion": "failure",
+        "html_url": "https://github.com/Cookiedoo/ostean/actions/runs/39810415161/job/119949053948"
+      }
+    ]
+  },
+  {
+    "run": {
+      "id": 39824531627,
+      "head_sha": "015f38c1ff9082f04de496b389963bdd506977ef",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/Cookiedoo/ostean/actions/runs/39824531627"
+    },
+    "jobs": [
+      {
+        "name": "package",
+        "conclusion": "success",
+        "html_url": "https://github.com/Cookiedoo/ostean/actions/runs/39824531627/job/119984199351"
+      },
+      {
+        "name": "native",
+        "conclusion": "skipped",
+        "html_url": "https://github.com/Cookiedoo/ostean/actions/runs/39824531627/job/119984201086"
+      }
+    ]
+  }
+]

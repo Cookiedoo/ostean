@@ -34,7 +34,7 @@ ostean, preserves native exit codes, and validates the bundled binary checksum.
 npm exec --offline --package .\dist\create-ostean-1.0.0.tgz -- create-ostean my-app --lang=ts
 ```
 
-The registry command is npx create-ostean@latest after publication.
+The published registry command is npx create-ostean@latest.
 Publication status and latency measurements are recorded in BUILD_STATUS.md.
 The npm SemVer is packaging metadata; the release identity is v_final.
 The release matrix covers Windows x64, Linux x64/ARM64, and macOS x64/ARM64.
@@ -61,6 +61,9 @@ exit codes, diagnostics, binary/archive checksums, and test reports:
 - SOCKET_BUILD_PROOF.json: strict compilation and deterministic behavior.
 - DISTRIBUTION_PROOF.json: packed npm execution and dispatcher controls.
 - PERFORMANCE_PROOF.json: measured fresh-process initialization and check times.
+- NPM_PUBLICATION_PROOF.json: public registry integrity verification.
+- REGISTRY_INSTALL_PROOF.json: fresh-cache public npx, check, and test results.
+- GITHUB_PROOF.json: platform builds and the recovered packaging job.
 
 The original 10 ms initialization and 20 ms verification targets remain unmet
 on the development host. Semantic verification currently takes seconds.

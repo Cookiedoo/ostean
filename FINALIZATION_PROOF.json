@@ -1,0 +1,107 @@
+{
+  "originalArchiveSha256": "f730242f3dc2de7b4255519960ead25f52b8fabd35e6b48866fdd754df9ef5bc",
+  "archiveSha256": "1975e1f66065ff8ec31356b47e627433027b4caf3fca5a9224a52eb629f75b13",
+  "changedMetadata": [
+    "package.json",
+    "README.md"
+  ],
+  "unchangedExecutablePayload": true,
+  "entries": {
+    "package/licenses/csstype-LICENSE": {
+      "sha256": "11d55bd4541c75ee7879547ac49089c489163dae49551389713c3d026cab383e",
+      "mode": 420
+    },
+    "package/LICENSE": {
+      "sha256": "73412cf27700efe2f6ecaf1f80816c7af7f1f9547674647d530153060f0ac562",
+      "mode": 420
+    },
+    "package/licenses/node-types-LICENSE": {
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "mode": 420
+    },
+    "package/native/darwin-arm64/ostean": {
+      "sha256": "2d7dbee0f235eb2c852f57c73333dad6e5d20e12c9d26064c73efe9a4dd36d89",
+      "mode": 493
+    },
+    "package/native/darwin-x64/ostean": {
+      "sha256": "46eda6eb0c29b92974b017a959b61eb3b8de2cefec5f9ee2ad75559a2aadc410",
+      "mode": 493
+    },
+    "package/native/linux-arm64/ostean": {
+      "sha256": "d4987e3d8c8aeb416296ee6e6f6bedf9eb9a2e7a955ccd58a7417ba5084d9e45",
+      "mode": 493
+    },
+    "package/native/linux-x64/ostean": {
+      "sha256": "870a2fc0ce0ba34331d36f19ac21e452a8829c7dd99f6a5d56012d5938e84523",
+      "mode": 493
+    },
+    "package/licenses/quickjs-LICENSE": {
+      "sha256": "598fd7fc928e4350abce36e337ba5a1346923c5c692f5be92c3d8e29ddd7c18d",
+      "mode": 420
+    },
+    "package/licenses/react-dom-types-LICENSE": {
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "mode": 420
+    },
+    "package/licenses/react-types-LICENSE": {
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "mode": 420
+    },
+    "package/licenses/undici-types-LICENSE": {
+      "sha256": "a6db8096b2707bc0102d256917d4d33f298ba36d8c3f25de067a2b5bb379db27",
+      "mode": 420
+    },
+    "package/bin/create-ostean.cjs": {
+      "sha256": "1daeed061907a0ca415bdf68aee0f491215ce3c370756bee0a025659a0a471e6",
+      "mode": 420
+    },
+    "package/bin/dispatch.cjs": {
+      "sha256": "fc21773110cbe693a2361587954f8f61dcd2453a455285dd14b6777d84e78042",
+      "mode": 420
+    },
+    "package/bin/ostean.cjs": {
+      "sha256": "929310beac78c4afb58aef506f2f6f90e9afc41c18fe363658d16d64b92d14e4",
+      "mode": 420
+    },
+    "package/native/win32-x64/ostean.exe": {
+      "sha256": "ae8bc3aede9f9d1702cfd8efe3b2a98e9459910a24953c7bd910064225730a8c",
+      "mode": 493
+    },
+    "package/manifest.json": {
+      "sha256": "230bd7bf5e192d263a94dc0bcd69862986fc35596d65ba40e38319c7b4ea5519",
+      "mode": 420
+    },
+    "package/package.json": {
+      "sha256": "bd9acd1c852992abf35bd42da5cf2bdb2a973f422ad6841e13cb10ec5551c598",
+      "mode": 420
+    },
+    "package/README.md": {
+      "sha256": "024e30254137311dab31ff0f1e1e43830f9cbd5194fdfd23bd389f447b91b23a",
+      "mode": 420
+    },
+    "package/THIRD_PARTY.md": {
+      "sha256": "127065c4fd814ff4c24012a78c30a9e41d320137a2c1ac935069bf027b768629",
+      "mode": 420
+    },
+    "package/licenses/gcc-COPYING.RUNTIME.txt": {
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+      "mode": 420
+    },
+    "package/licenses/gcc-COPYING3.txt": {
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "mode": 420
+    },
+    "package/licenses/typescript-LICENSE.txt": {
+      "sha256": "a5e9f9b1575301c7a7a03508fdaa2e05a918cc17fd21c6e898096a96d6a34f61",
+      "mode": 420
+    },
+    "package/licenses/typescript-ThirdPartyNoticeText.txt": {
+      "sha256": "01de8bc3c687a3df5a83e8b80db5006270f9f3361dbb437faf3dcc033dcd6bb1",
+      "mode": 420
+    },
+    "package/licenses/winpthreads-COPYING.txt": {
+      "sha256": "63263614cdd29f2f93cba85e992f041b31f9fc7b4033692f31269489a8a1b177",
+      "mode": 420
+    }
+  }
+}

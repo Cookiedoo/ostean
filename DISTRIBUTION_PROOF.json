@@ -1,5 +1,5 @@
 {
-  "archiveSha256": "4ceece1c942176b3d394d51ac57711d40439f36cd9f9aeb04c4d69f1c3df2ced",
+  "archiveSha256": "1975e1f66065ff8ec31356b47e627433027b4caf3fca5a9224a52eb629f75b13",
   "dispatcher": [
     {
       "platform": "win32",
@@ -30,7 +30,7 @@
       "exit": 2
     },
     {
-      "platform": "linux",
+      "platform": "unsupported",
       "status": 0,
       "tampered": false,
       "initialize": true,
@@ -73,8 +73,8 @@
         "--lang=py"
       ],
       "exit": 2,
-      "stdout": "<cli>:1: ERR_705_UNVERIFIABLE_CONSTRUCT: Usage: ostean init project-name --lang=ts; only ts is supported\r\n",
-      "stderr": ""
+      "stdout": "",
+      "stderr": "<cli>:1: ERR_705_UNVERIFIABLE_CONSTRUCT: Only the ts Language Socket is supported\r\n"
     }
   ],
   "ok": true
