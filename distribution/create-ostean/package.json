@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Ostean (v_final): verified athletic TypeScript architecture",
   "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/Cookiedoo/ostean.git" },
+  "homepage": "https://github.com/Cookiedoo/ostean#readme",
+  "bugs": { "url": "https://github.com/Cookiedoo/ostean/issues" },
   "bin": {
     "create-ostean": "bin/create-ostean.cjs",
     "ostean": "bin/ostean.cjs"

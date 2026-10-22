@@ -60,7 +60,8 @@ dispatcher('win32', 2, false, false);
 dispatcher('win32', 0, true, false);
 dispatcher('unsupported', 0, false, true);
 
-const candidates = [process.env.npm_execpath, path.join(path.dirname(process.execPath), 'node_modules/npm/bin/npm-cli.js')];
+const candidates = [process.env.npm_execpath, path.join(path.dirname(process.execPath), 'node_modules/npm/bin/npm-cli.js'),
+  path.resolve(path.dirname(process.execPath), '../lib/node_modules/npm/bin/npm-cli.js')];
 const npm = candidates.find(/* Locate an installed npm JavaScript entrypoint. */ function exists(file) { return file && fs.existsSync(file); });
 assert.ok(npm, 'npm CLI JavaScript entrypoint is required');
 

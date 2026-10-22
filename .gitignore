@@ -4,3 +4,4 @@
 distribution/create-ostean/native/
 distribution/create-ostean/manifest.json
 PACK_MANIFEST.json
+__pycache__/

@@ -1,15 +1,23 @@
 name: Verified native release
 on:
   workflow_dispatch:
+    inputs:
+      native_run:
+        description: Completed native proof run for packaging only
+        required: false
+        default: ''
+        type: string
   push:
     branches: [main]
 permissions:
   contents: read
+  actions: read
 concurrency:
   group: release-${{ github.ref }}
   cancel-in-progress: true
 jobs:
   native:
+    if: ${{ !inputs.native_run }}
     strategy:
       fail-fast: false
       matrix:
@@ -55,6 +63,7 @@ jobs:
             PERFORMANCE_PROOF.json
           if-no-files-found: error
   package:
+    if: ${{ always() && (needs.native.result == 'success' || (github.event_name == 'workflow_dispatch' && inputs.native_run != '')) }}
     needs: native
     runs-on: ubuntu-24.04
     timeout-minutes: 15
@@ -67,6 +76,8 @@ jobs:
         with:
           pattern: native-*
           path: work/platforms
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.native_run || github.run_id }}
       - name: Assemble proved platform binaries
         run: node distribution/assemble.mjs work/platforms darwin-arm64,darwin-x64,linux-arm64,linux-x64,win32-x64
       - name: Pack npm release

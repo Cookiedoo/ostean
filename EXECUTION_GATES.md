@@ -728,3 +728,148 @@ Resolve declaration origins; reject opaque loaders and unregistered system capab
 
 [CODE]
 Source: native/analyzer/platform.js
+
+# Native Release Completion Gates
+
+## Release: native/init.cpp
+
+[INTENT]
+Emit canonical project files through native C++.
+
+[PSEUDOCODE]
+Validate language and destination; create fixed directories; write immutable template bytes.
+
+[CODE]
+Source: native/init.cpp
+
+## Release: native/bytecode.cpp
+
+[INTENT]
+Precompile trusted compiler and analyzer units.
+
+[PSEUDOCODE]
+Compile with the matching engine; strip compiler debug text; retain analyzer source for isolation.
+
+[CODE]
+Source: native/bytecode.cpp
+
+## Release: native/build.py
+
+[INTENT]
+Build matching platform bytecode and native template tables.
+
+[PSEUDOCODE]
+Verify pinned inputs; compile the bytecode tool; embed trusted units; link the standalone executable.
+
+[CODE]
+Source: native/build.py
+
+## Release: native/analyzer/base.js
+
+[INTENT]
+Reuse confined source reads within one verification run.
+
+[PSEUDOCODE]
+Normalize paths; preserve embedded library precedence; cache both file contents and missing-file results.
+
+[CODE]
+Source: native/analyzer/base.js
+
+## Release: native/analyzer/program.js
+
+[INTENT]
+Index compiler directories without repeated global scans.
+
+[PSEUDOCODE]
+Collect embedded and inventoried parents; memoize package probes; retain strict semantic verification.
+
+[CODE]
+Source: native/analyzer/program.js
+
+## Release: .github/workflows/release.yml
+
+[INTENT]
+Admit only tested platform binaries into the npm package.
+
+[PSEUDOCODE]
+Build five native targets; require socket and adversarial proofs; package and execute the resulting archive.
+
+[CODE]
+Source: .github/workflows/release.yml
+
+## Release: distribution/assemble.mjs
+
+[INTENT]
+Assemble exactly the requested proven platform set.
+
+[PSEUDOCODE]
+Check binary hashes and complete native proofs; preserve Unix execution modes; emit the manifest.
+
+[CODE]
+Source: distribution/assemble.mjs
+
+## Release: distribution/finalize.py
+
+[INTENT]
+Update public metadata without changing tested executable payloads.
+
+[PSEUDOCODE]
+Compare executable package settings; replace README and repository metadata; preserve archive modes and bytes.
+
+[CODE]
+Source: distribution/finalize.py
+
+## Release: tests/performance.mjs
+
+[INTENT]
+Measure original latency targets without weakening verification.
+
+[PSEUDOCODE]
+Run fresh native processes; require successful commands; record medians and explicit target outcomes.
+
+[CODE]
+Source: tests/performance.mjs
+
+## Release: tests/finalize.mjs
+
+[INTENT]
+Verify deterministic metadata finalization and executable preservation.
+
+[PSEUDOCODE]
+Finalize isolated metadata twice; compare hashes; reject a changed binary dispatcher configuration.
+
+[CODE]
+Source: tests/finalize.mjs
+
+## Release: tests/distribution.mjs
+
+[INTENT]
+Verify packaged dispatch across the supported platform manifest.
+
+[PSEUDOCODE]
+Simulate exits and integrity failures; reject an unknown platform; execute real packed commands.
+
+[CODE]
+Source: tests/distribution.mjs
+
+## Release: .gitattributes
+
+[INTENT]
+Preserve portable template bytes across native builds.
+
+[PSEUDOCODE]
+Require LF checkout for source and template text.
+
+[CODE]
+Source: .gitattributes
+
+## Release: .gitignore
+
+[INTENT]
+Exclude build intermediates while preserving dispatcher source.
+
+[PSEUDOCODE]
+Anchor root build directories; ignore bundled binaries and Python caches.
+
+[CODE]
+Source: .gitignore

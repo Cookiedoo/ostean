@@ -21,8 +21,14 @@ node ostean/tests/acceptance.mjs
 
 Preparation verifies the QuickJS archive and installs integrity-locked npm inputs
 with lifecycle hooks disabled. Add --offline when those inputs are cached.
-The build embeds the compiler, declaration metadata, analyzer, and template tree.
+The build precompiles trusted JavaScript with its matching QuickJS engine.
+Compiler bytecode strips debugging text; analyzer source retains test isolation.
+Initialization writes immutable native templates without starting JavaScript.
+Source reads and directory probes are cached within each verification run.
+No compliance result is reused between processes.
 Windows linking is static and disables the PE build timestamp.
-The release artifact provided here is Windows x64; other targets require native
-compilation and the same acceptance suite on their target operating system.
+Quoted vendor include paths avoid the VERSION/<version> collision on macOS.
+The release workflow builds Windows x64, Linux x64/ARM64, and macOS x64/ARM64.
+Each artifact requires all native acceptance checks on its own operating system.
+Set OSTEAN_PROFILE=1 to report compiler, analyzer, and cleanup durations.
 See ../SUPPORTED_TYPESCRIPT.md for the verified grammar and capabilities.

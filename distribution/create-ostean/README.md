@@ -4,12 +4,14 @@ Ostean is pronounced **Oste-AN**.
 
 ```text
 npx create-ostean@latest project-name --lang=ts
-ostean init project-name --lang=ts
-ostean check
-ostean test
+cd project-name
+npm exec --yes --package=create-ostean@latest -- ostean check
+npm exec --yes --package=create-ostean@latest -- ostean test
 ```
 
-This package bundles the standalone Windows x64 verifier and scaffolder.
+This package bundles standalone native verifiers and scaffolders.
+The release matrix covers Windows x64, Linux x64/ARM64, and macOS x64/ARM64.
+The manifest records the verified binaries included in this package.
 Its dispatcher verifies the executable checksum and preserves native exit codes.
 It has no runtime dependencies or installation hooks.
 Unsupported platforms fail explicitly. Native commands require no Node interpreter;
@@ -32,3 +34,8 @@ npm exec --offline --package ./create-ostean-1.0.0.tgz -- create-ostean project-
 
 The default project name is ostean-app. Existing destinations are never overwritten.
 Badge standard: **Ostean Verified — Athletic Codebase**.
+
+Full semantic analysis currently takes seconds. The original targets of
+10 ms initialization and 20 ms verification are not met on the development host.
+Platform proofs and measurements are available in the
+[source repository](https://github.com/Cookiedoo/ostean).

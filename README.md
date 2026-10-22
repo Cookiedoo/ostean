@@ -3,7 +3,7 @@
 Pronunciation: **Oste-AN**. Badge: **Ostean Verified — Athletic Codebase**.
 
 The production bundle contains the canonical TypeScript socket, standalone
-Windows x64 CLI, npm dispatcher, build inputs, and executable verification suites.
+native CLI, npm dispatcher, build inputs, and executable verification suites.
 
 ## Native use
 
@@ -35,10 +35,11 @@ npm exec --offline --package .\dist\create-ostean-1.0.0.tgz -- create-ostean my-
 ```
 
 The registry command is npx create-ostean@latest after publication.
-This bundle includes a locally tested archive; registry publication has not occurred.
+Publication status and latency measurements are recorded in BUILD_STATUS.md.
 The npm SemVer is packaging metadata; the release identity is v_final.
-The included executable targets Windows x64. Other platforms require native
-compilation and the same acceptance suite on the target operating system.
+The release matrix covers Windows x64, Linux x64/ARM64, and macOS x64/ARM64.
+Each included binary must match a passing native proof from its target platform.
+The package manifest lists admitted platform binaries and their checksums.
 
 ## Verification
 
@@ -59,6 +60,11 @@ exit codes, diagnostics, binary/archive checksums, and test reports:
 - NATIVE_PROOF.json: reference commands and adversarial fixtures.
 - SOCKET_BUILD_PROOF.json: strict compilation and deterministic behavior.
 - DISTRIBUTION_PROOF.json: packed npm execution and dispatcher controls.
+- PERFORMANCE_PROOF.json: measured fresh-process initialization and check times.
+
+The original 10 ms initialization and 20 ms verification targets remain unmet
+on the development host. Semantic verification currently takes seconds.
+Unsupported syntax continues to fail closed.
 
 ## Rebuild and reproduce
 
