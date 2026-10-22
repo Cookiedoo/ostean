@@ -100,7 +100,7 @@ def build():
                         '-c', str(VENDOR / (name + '.c')), '-o', str(output)], check=True)
         objects.append(str(output))
     precompiler = BUILD / ('bytecode.exe' if os.name == 'nt' else 'bytecode')
-    command = [linker, '-std=c++17', '-O2', '-I' + str(VENDOR), str(ROOT / 'native' / 'bytecode.cpp'),
+    command = [linker, '-std=c++17', '-O2', '-iquote' + str(VENDOR), str(ROOT / 'native' / 'bytecode.cpp'),
                *objects, '-lm', '-lpthread', '-o', str(precompiler)]
     if os.name == 'nt':
         command.extend(['-static', '-Wl,--stack,16777216', '-Wl,--no-insert-timestamp'])
@@ -125,7 +125,7 @@ def build():
         binary.parent.mkdir(parents=True, exist_ok=True)
     sources = [str(ROOT / 'native' / name) for name in
                ['main.cpp', 'filesystem.cpp', 'scaffold.cpp', 'isolation.cpp', 'init.cpp']]
-    command = [linker, '-std=c++17', '-O2', '-I' + str(VENDOR), '-I' + str(BUILD),
+    command = [linker, '-std=c++17', '-O2', '-iquote' + str(VENDOR), '-I' + str(BUILD),
                *sources, *objects, '-lm', '-lpthread', '-o', str(binary)]
     if os.name == 'nt':
         command.extend(['-static', '-static-libgcc', '-static-libstdc++', '-Wl,--stack,16777216', '-Wl,--no-insert-timestamp'])

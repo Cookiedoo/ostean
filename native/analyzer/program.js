@@ -20,6 +20,16 @@ function buildProgram() {
   var options = converted.options;
   options.noEmit = true;
   options.types = ['node'];
+  var directories = new Set();
+  var probes = new Map();
+  for (var name of Object.keys(OST_LIBRARIES).concat(OST.files.map(/* Resolve project sources into compiler paths. */ function absolute(name) { return '/project/' + name; }))) {
+    var parent = parentPath(name);
+    while (parent) {
+      directories.add(parent + '/');
+      parent = parentPath(parent);
+    }
+    directories.add('/');
+  }
   var host = {
     // Read a fully parsed source file.
     getSourceFile: function getSourceFile(name, version) {
@@ -45,10 +55,9 @@ function buildProgram() {
     // Recognize embedded and project directories.
     directoryExists: function directoryExists(name) {
       var prefix = normalizePath(name).replace(/\/$/, '') + '/';
-      for (var key of Object.keys(OST_LIBRARIES)) if (key.startsWith(prefix)) return true;
-      for (var source of OST.files) if (('/project/' + source).startsWith(prefix)) return true;
-      if (readSource(prefix + 'package.json') !== undefined) return true;
-      return false;
+      if (directories.has(prefix)) return true;
+      if (!probes.has(prefix)) probes.set(prefix, readSource(prefix + 'package.json') !== undefined);
+      return probes.get(prefix);
     },
     // Keep automatic ambient packages disabled.
     getDirectories: function getDirectories() { return []; },

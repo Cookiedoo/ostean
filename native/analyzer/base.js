@@ -1,4 +1,4 @@
-var OST = { diagnostics: [], files: [], sources: [], edges: new Map(), program: null, checker: null };
+var OST = { diagnostics: [], files: [], sources: [], edges: new Map(), reads: new Map(), program: null, checker: null };
 var OST_CODES = {
   701: 'ERR_701_LAYER_BREACH', 702: 'ERR_702_WEIGHT_EXCEEDED',
   703: 'ERR_703_NONDETERMINISTIC_CALL', 704: 'ERR_704_DUPLICATION_BREACH',
@@ -28,7 +28,8 @@ function readSource(name) {
   if (Object.hasOwn(OST_LIBRARIES, key)) return OST_LIBRARIES[key];
   if (key.startsWith('/project/')) key = key.slice('/project/'.length);
   else if (key.startsWith('/') || /^[A-Za-z]:/.test(key)) return undefined;
-  return OST_NATIVE.read(key);
+  if (!OST.reads.has(key)) OST.reads.set(key, OST_NATIVE.read(key));
+  return OST.reads.get(key);
 }
 
 // Record a stable architectural diagnostic.
